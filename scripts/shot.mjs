@@ -11,7 +11,7 @@ const browser = await chromium.launch({
 });
 const vw = parseInt(process.env.VW || "1440", 10);
 const vh = parseInt(process.env.VH || "900", 10);
-const page = await browser.newPage({ viewport: { width: vw, height: vh } });
+const page = await browser.newPage({ viewport: { width: vw, height: vh }, deviceScaleFactor: 1 });
 page.on("console", (m) => console.log("[console]", m.type(), m.text()));
 page.on("pageerror", (e) => console.log("[pageerror]", e.message));
 await page.goto(url, { waitUntil: "networkidle", timeout: 60000 });
