@@ -47,7 +47,7 @@ export default function AiAgentsPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden pt-28 pb-16 md:pt-36 md:pb-24">
+      <section className="relative overflow-hidden pt-32 pb-16 md:pt-40 md:pb-24">
         <div className="pointer-events-none absolute inset-0 hero-bg" aria-hidden />
         <div className="pointer-events-none absolute inset-0 grid-overlay" aria-hidden />
 
@@ -58,11 +58,11 @@ export default function AiAgentsPage() {
               <span className="text-xs font-medium text-amber">AI Agents</span>
             </div>
 
-            <h1 className="font-heading text-4xl font-bold leading-[1.05] tracking-tight md:text-6xl">
+            <h1 className="font-heading text-3xl font-bold leading-[1.12] tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
               Agenti AI che lavorano <span className="text-gradient">mentre tu dormi.</span>
             </h1>
 
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-text-dim md:mt-8 md:text-xl">
+            <p className="mt-7 max-w-2xl text-base leading-relaxed text-text-dim md:text-lg">
               Agenti WhatsApp che riattivano i tuoi lead e gestiscono le prenotazioni in autonomia.
               Niente turni, niente ferie, niente chiamate perse — solo conversazioni che diventano
               clienti.
@@ -139,10 +139,7 @@ export default function AiAgentsPage() {
       <AgentSteps steps={steps} title="Dall'idea all'agente attivo." />
 
       {/* CTA finale */}
-      <AgentCTA
-        title={<>Pronto a mettere un agente AI <span className="text-lime">al lavoro?</span></>}
-        subtitle="Raccontaci la tua attività. Ti diciamo quale agente fa al caso tuo e come lo costruiamo."
-      />
+      <AgentCTA headline="Pronto a mettere un agente AI" greenText="al lavoro?" />
     </>
   );
 }

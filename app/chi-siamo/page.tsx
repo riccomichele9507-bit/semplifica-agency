@@ -40,7 +40,7 @@ export default function ChiSiamoPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden pt-28 pb-16 md:pb-20">
+      <section className="relative overflow-hidden pt-32 pb-16 md:pt-40 md:pb-20">
         <div className="pointer-events-none absolute inset-0 hero-bg" />
         <div className="pointer-events-none absolute inset-0 grid-overlay" />
         <div className="container-x relative z-10">
@@ -48,7 +48,7 @@ export default function ChiSiamoPage() {
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-amber">
               Chi siamo
             </p>
-            <h1 className="font-heading text-4xl font-bold leading-[1.02] md:text-6xl">
+            <h1 className="font-heading text-3xl font-bold leading-[1.12] tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
               Costruiamo come imprenditori,{" "}
               <span className="text-gradient">non come fornitori.</span>
             </h1>

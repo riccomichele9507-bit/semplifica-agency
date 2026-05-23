@@ -1,7 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import Reveal from "@/components/anim/Reveal";
 import PhoneFrame from "@/components/PhoneFrame";
-import AgentBox from "@/components/AgentBox";
 
 function ArrowLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
@@ -23,7 +23,7 @@ export default function ServiceBlocks() {
       <div className="container-x">
         <Reveal className="mb-12 max-w-2xl md:mb-20">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-amber">Cosa facciamo</p>
-          <h2 className="font-heading text-3xl font-bold leading-[1.05] md:text-5xl">
+          <h2 className="font-heading text-3xl font-bold leading-[1.12] text-balance md:text-5xl">
             Tre cose, fatte <span className="text-gradient">bene.</span>
           </h2>
         </Reveal>
@@ -80,16 +80,16 @@ export default function ServiceBlocks() {
 
               <div className="order-1 grid grid-cols-2 gap-4">
                 {[
-                  { name: "ARIA", initial: "A", sub: "Lead WhatsApp", href: "/aria" },
-                  { name: "FILO", initial: "F", sub: "Prenotazioni", href: "/filo" },
+                  { name: "ARIA", desc: "Riattiva i lead dormienti su WhatsApp e prenota appuntamenti in autonomia.", href: "/aria", img: "/agents/aria-box.png" },
+                  { name: "FILO", desc: "Gestisce prenotazioni e reminder su WhatsApp, 24/7.", href: "/filo", img: "/agents/filo-box.png" },
                 ].map((a) => (
                   <Link key={a.name} href={a.href} className="group relative overflow-hidden rounded-2xl border border-border bg-surface p-3 transition-all hover:-translate-y-1 hover:border-lime/40">
-                    <div className="overflow-hidden rounded-xl bg-bg">
-                      <AgentBox initial={a.initial} className="transition-transform duration-500 group-hover:scale-105" />
+                    <div className="relative aspect-square overflow-hidden rounded-xl bg-bg">
+                      <Image src={a.img} alt={`${a.name} — agente AI`} fill sizes="(max-width:768px) 45vw, 240px" className="object-cover transition-transform duration-500 group-hover:scale-105" />
                     </div>
                     <div className="mt-3 px-1">
                       <p className="font-heading text-base font-bold transition-colors group-hover:text-lime">{a.name}</p>
-                      <p className="text-xs text-text-dim">{a.sub}</p>
+                      <p className="mt-1 text-xs leading-snug text-text-dim">{a.desc}</p>
                     </div>
                   </Link>
                 ))}

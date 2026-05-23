@@ -38,14 +38,14 @@ export default function WebAppsPage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative overflow-hidden pt-28 pb-16 md:pt-36 md:pb-24">
+      <section className="relative overflow-hidden pt-32 pb-16 md:pt-40 md:pb-24">
         <div className="pointer-events-none absolute inset-0 hero-bg" />
         <div className="pointer-events-none absolute inset-0 grid-overlay" />
         <div className="container-x relative z-10">
           <div className="grid items-center gap-12 md:grid-cols-2">
             <Reveal>
               <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-amber">Web Apps</p>
-              <h1 className="font-heading text-4xl font-bold leading-[0.98] tracking-tight md:text-6xl">
+              <h1 className="font-heading text-3xl font-bold leading-[1.1] tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
                 Web app che le persone <span className="text-gradient">vogliono usare.</span>
               </h1>
               <p className="mt-6 max-w-md text-base text-text-dim md:text-lg">

@@ -94,7 +94,7 @@ export default function CreativeAIPage() {
   return (
     <>
       {/* ===== Hero ===== */}
-      <section className="relative flex min-h-[88svh] items-center overflow-hidden pt-28">
+      <section className="relative flex min-h-[88svh] items-center overflow-hidden pt-32 md:pt-36">
         <div className="pointer-events-none absolute inset-0 hero-bg" />
         <div className="pointer-events-none absolute inset-0 grid-overlay" />
 
@@ -105,7 +105,7 @@ export default function CreativeAIPage() {
               <span className="text-xs font-medium text-amber">Creative AI</span>
             </div>
 
-            <h1 className="font-heading font-bold leading-[0.95] tracking-tight text-[clamp(2.5rem,9vw,5.5rem)]">
+            <h1 className="font-heading font-bold leading-[1.08] tracking-tight text-balance text-[clamp(2.25rem,7vw,5rem)]">
               <span className="block">Contenuti che</span>
               <span className="block text-gradient">fermano lo scroll.</span>
             </h1>
