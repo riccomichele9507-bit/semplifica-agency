@@ -78,18 +78,21 @@ export default function ServiceBlocks() {
                 </div>
               </div>
 
-              <div className="order-1 grid grid-cols-2 gap-4">
+              <div className="order-1 grid grid-cols-1 gap-4 sm:grid-cols-2">
                 {[
-                  { name: "ARIA", desc: "Riattiva i lead dormienti su WhatsApp e prenota appuntamenti in autonomia.", href: "/aria", img: "/agents/aria-box.png" },
-                  { name: "FILO", desc: "Gestisce prenotazioni e reminder su WhatsApp, 24/7.", href: "/filo", img: "/agents/filo-box.png" },
+                  { name: "ARIA", tag: "Riattivazione lead", desc: "Riattiva i lead dormienti su WhatsApp con messaggi personalizzati e prenota appuntamenti in autonomia.", href: "/aria", img: "/agents/aria-box.png" },
+                  { name: "FILO", tag: "Prenotazioni", desc: "Riceve richieste, verifica disponibilità e gestisce prenotazioni e reminder su WhatsApp, 24/7.", href: "/filo", img: "/agents/filo-box.png" },
                 ].map((a) => (
-                  <Link key={a.name} href={a.href} className="group relative overflow-hidden rounded-2xl border border-border bg-surface p-3 transition-all hover:-translate-y-1 hover:border-lime/40">
+                  <Link key={a.name} href={a.href} className="group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-surface p-4 transition-all hover:-translate-y-1 hover:border-lime/40">
                     <div className="relative aspect-square overflow-hidden rounded-xl bg-bg">
-                      <Image src={a.img} alt={`${a.name} — agente AI`} fill sizes="(max-width:768px) 45vw, 240px" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                      <Image src={a.img} alt={`${a.name} — agente AI`} fill sizes="(max-width:768px) 90vw, 280px" className="object-cover transition-transform duration-500 group-hover:scale-105" />
                     </div>
-                    <div className="mt-3 px-1">
-                      <p className="font-heading text-base font-bold transition-colors group-hover:text-lime">{a.name}</p>
-                      <p className="mt-1 text-xs leading-snug text-text-dim">{a.desc}</p>
+                    <div className="mt-4 px-1 pb-1">
+                      <div className="flex items-baseline justify-between gap-2">
+                        <p className="font-heading text-xl font-bold transition-colors group-hover:text-lime">{a.name}</p>
+                        <span className="text-[10px] uppercase tracking-wider text-amber">{a.tag}</span>
+                      </div>
+                      <p className="mt-2 text-sm leading-relaxed text-text-dim">{a.desc}</p>
                     </div>
                   </Link>
                 ))}
