@@ -63,8 +63,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col items-start justify-between gap-2 border-t border-border pt-6 text-xs text-text-dim md:flex-row md:items-center">
-          <p>© {new Date().getFullYear()} {site.name} — {site.founder}. {site.location}.</p>
-          <p>Costruito con Next.js · WebGL · troppa caffeina.</p>
+          <p>© {new Date().getFullYear()} {site.name}. {site.location}.</p>
         </div>
       </div>
     </footer>

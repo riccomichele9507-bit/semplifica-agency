@@ -128,3 +128,15 @@
 @utility animate-scroll-down {
   animation: scroll-down 1.5s ease-in-out infinite;
 }
+
+/* Gentle floating for the hero phone mockups */
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-16px); }
+}
+@utility animate-float {
+  animation: float-y 5s ease-in-out infinite;
+}
+@utility animate-float-slow {
+  animation: float-y 6.5s ease-in-out infinite;
+}

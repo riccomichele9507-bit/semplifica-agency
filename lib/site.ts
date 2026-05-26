@@ -6,9 +6,9 @@ export const site = {
   phone: "+39 346 248 2556",
   whatsapp: "https://wa.me/393462482556",
   url: "https://semplifica.ai",
-  tagline: "L'agenzia che costruisce davvero.",
+  tagline: "Costruiamo strumenti che semplificano.",
   description:
-    "Web app premium, automazioni AI e creative su misura. Niente template, niente promesse vuote — solo roba che funziona.",
+    "Web app, agenti AI e contenuti creativi su misura per PMI italiane. Niente template, niente promesse vuote. Solo strumenti che funzionano.",
 };
 
 export type ServiceArea = {

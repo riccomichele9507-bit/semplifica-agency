@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import Reveal from "@/components/anim/Reveal";
-import PhoneFrame from "@/components/PhoneFrame";
 
 function ArrowLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
@@ -22,9 +21,9 @@ export default function ServiceBlocks() {
     <section id="servizi" className="relative py-16 md:py-24">
       <div className="container-x">
         <Reveal className="mb-12 max-w-2xl md:mb-20">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-amber">Cosa facciamo</p>
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-amber">Servizi</p>
           <h2 className="font-heading text-3xl font-bold leading-[1.12] text-balance md:text-5xl">
-            Tre cose, fatte <span className="text-gradient">bene.</span>
+            Cosa costruiamo <span className="text-gradient">per te.</span>
           </h2>
         </Reveal>
 
@@ -32,8 +31,8 @@ export default function ServiceBlocks() {
 
           {/* 1 — WEB DESIGN & APP */}
           <Reveal>
-            <div className="grid items-center gap-8 md:grid-cols-2 md:gap-14">
-              <div className="order-2 md:order-1">
+            <div>
+              <div className="mb-10 max-w-2xl md:mb-14">
                 <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-text-dim">01 — Web Design &amp; App</p>
                 <h3 className="font-heading text-2xl font-bold md:text-4xl">
                   Web app che le persone vogliono usare.
@@ -42,20 +41,26 @@ export default function ServiceBlocks() {
                   Progettiamo e sviluppiamo web app premium su misura: veloci, curate
                   nel dettaglio, perfette da mobile. Dal food ordering ai gestionali.
                 </p>
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {["Next.js", "React", "Mobile-first", "UI/UX"].map((t) => (
-                    <span key={t} className="rounded-full border border-border bg-surface px-3 py-1 text-xs text-text-dim">{t}</span>
-                  ))}
-                </div>
-                <div className="mt-8">
+                <div className="mt-6">
                   <ArrowLink href="/web-apps">Scopri i progetti web</ArrowLink>
                 </div>
               </div>
 
-              <Link href="/web-apps" className="group order-1 flex justify-center md:order-2">
-                <div className="relative w-full max-w-[260px] transition-transform duration-500 group-hover:-translate-y-2">
+              <Link href="/web-apps" className="group flex justify-center">
+                <div className="relative h-[440px] w-full max-w-[420px] md:h-[500px]">
                   <div className="absolute inset-0 -z-10 rounded-[3rem] bg-lime/10 blur-3xl" />
-                  <PhoneFrame src="/work/ssp-home.png" alt="Special Sushi Poke — web app" />
+                  {/* La Brace (dietro) */}
+                  <div className="animate-float-slow absolute right-0 top-10 w-[54%] rotate-[6deg]">
+                    <div className="relative aspect-[9/16] drop-shadow-[0_30px_70px_rgba(0,0,0,0.6)]">
+                      <Image src="/work/la-brace/marble-home.png" alt="La Brace — web app" fill sizes="220px" className="object-contain" />
+                    </div>
+                  </div>
+                  {/* Special Sushi Poke (davanti) — versione scura con Offerta del giorno */}
+                  <div className="animate-float absolute left-0 top-0 w-[58%] -rotate-[5deg]">
+                    <div className="relative aspect-[9/16] drop-shadow-[0_40px_80px_rgba(0,0,0,0.7)]">
+                      <Image src="/work/special-sushi-poke/scuro-home.png" alt="Special Sushi Poke — web app" fill sizes="240px" className="object-contain" />
+                    </div>
+                  </div>
                 </div>
               </Link>
             </div>
@@ -63,8 +68,8 @@ export default function ServiceBlocks() {
 
           {/* 2 — AI AGENTS */}
           <Reveal>
-            <div className="grid items-center gap-8 md:grid-cols-2 md:gap-14">
-              <div className="order-2">
+            <div>
+              <div className="mb-10 max-w-2xl md:mb-14">
                 <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-text-dim">02 — AI Agents</p>
                 <h3 className="font-heading text-2xl font-bold md:text-4xl">
                   Agenti AI che lavorano per te, 24/7.
@@ -73,12 +78,12 @@ export default function ServiceBlocks() {
                   Due agenti pronti: <span className="text-text">ARIA</span> riattiva i lead dormienti
                   su WhatsApp, <span className="text-text">FILO</span> gestisce le prenotazioni in autonomia.
                 </p>
-                <div className="mt-8">
+                <div className="mt-6">
                   <ArrowLink href="/ai-agents">Scopri gli agenti</ArrowLink>
                 </div>
               </div>
 
-              <div className="order-1 grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                 {[
                   { name: "ARIA", tag: "Riattivazione lead", desc: "Riattiva i lead dormienti su WhatsApp con messaggi personalizzati e prenota appuntamenti in autonomia.", href: "/aria", img: "/agents/aria-box.png" },
                   { name: "FILO", tag: "Prenotazioni", desc: "Riceve richieste, verifica disponibilità e gestisce prenotazioni e reminder su WhatsApp, 24/7.", href: "/filo", img: "/agents/filo-box.png" },

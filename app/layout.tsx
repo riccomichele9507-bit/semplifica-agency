@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { site } from "@/lib/site";
-import Loader from "@/components/Loader";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -26,10 +26,10 @@ export default function RootLayout({
   return (
     <html lang="it">
       <body className="min-h-screen bg-bg text-text antialiased">
-        <Loader />
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );

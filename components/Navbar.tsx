@@ -32,6 +32,7 @@ export default function Navbar() {
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-8 md:flex">
+          <Link href="/" className="text-sm font-medium text-text-dim transition-colors hover:text-text">Home</Link>
           <button
             className="text-sm font-medium text-text-dim transition-colors hover:text-text"
             onMouseEnter={() => setMegaOpen(true)}
@@ -92,6 +93,7 @@ export default function Navbar() {
       >
         <div className="min-h-0 overflow-hidden">
           <div className="container-x flex flex-col gap-1 py-4">
+            <Link href="/" className="rounded-lg px-2 py-2.5 text-sm font-medium text-text-dim hover:text-text" onClick={() => setMobileOpen(false)}>Home</Link>
             {services.map((s) => (
               <Link key={s.slug} href={s.href} className="rounded-lg px-2 py-2.5 text-sm font-medium text-text-dim hover:text-text" onClick={() => setMobileOpen(false)}>
                 {s.label}

@@ -44,8 +44,8 @@ export default function Hero() {
           </div>
 
           <h1 className="font-heading font-bold leading-[1.08] tracking-tight text-balance text-[clamp(2.25rem,7vw,5rem)]">
-            <span className="hero-anim block">L&apos;agenzia che</span>
-            <span className="hero-anim block text-gradient">costruisce davvero.</span>
+            <span className="hero-anim block">Costruiamo strumenti</span>
+            <span className="hero-anim block text-gradient">che semplificano.</span>
           </h1>
 
           <p className="hero-anim mt-7 max-w-xl text-base leading-relaxed text-text-dim md:mt-8 md:text-lg">

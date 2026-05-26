@@ -94,7 +94,7 @@ export default function ContattiPage() {
             {/* Contatti diretti */}
             <Reveal stagger className="flex flex-col gap-4">
               <h2 className="font-heading text-2xl font-bold md:text-3xl">
-                Oppure scrivici diretto
+                Oppure scrivici
               </h2>
               {directContacts.map((c) =>
                 c.href ? (
