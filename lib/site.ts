@@ -39,10 +39,10 @@ export const services: ServiceArea[] = [
   {
     slug: "workflow-automation",
     label: "Workflow Automation",
-    href: "/#workflow",
+    href: "/workflow-automation",
     short: "Connetti app e automatizza i processi.",
     description:
-      "Make.com, n8n, Zapier. Eliminiamo la data entry manuale connettendo i tuoi tool con automazioni custom.",
+      "Make.com, n8n, Zapier. Eliminiamo la data entry manuale connettendo i tuoi tool con automazioni custom — recensioni, lead, preventivi.",
   },
   {
     slug: "custom-ai",

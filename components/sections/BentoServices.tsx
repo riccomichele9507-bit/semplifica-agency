@@ -67,7 +67,7 @@ export default function BentoServices() {
                 <h3 className="text-xl font-medium tracking-tight text-white">AI Agents</h3>
               </div>
               <p className="text-sm leading-relaxed mb-6 text-text-dim">
-                Agenti WhatsApp che lavorano per te 24/7. <span className="text-white">ARIA</span> riattiva i lead dormienti, <span className="text-white">FILO</span> gestisce le prenotazioni.
+                Quattro agenti per testo, voce e processi. <span className="text-white">ARIA</span> · <span className="text-white">FILO</span> · <span className="text-white">Voice</span> · <span className="text-white">QuoteBot</span>. Lavorano per te 24/7.
               </p>
               <div className="flex items-center gap-3 opacity-80 group-hover:opacity-100 transition-opacity">
                 <MessageSquare className="size-5 text-lime/80" />
@@ -81,7 +81,8 @@ export default function BentoServices() {
 
           {/* Workflow + Custom AI: 2 sub-cards in 1 row */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <div
+            <Link
+              href="/workflow-automation"
               id="workflow"
               className="group relative overflow-hidden rounded-2xl border bg-surface/60 p-7 hover:border-lime/30 transition-colors duration-500 border-white/10 backdrop-blur-sm"
             >
@@ -93,15 +94,18 @@ export default function BentoServices() {
                   <h3 className="text-lg font-medium tracking-tight text-white">Workflow</h3>
                 </div>
                 <p className="text-xs leading-relaxed text-text-dim mb-4">
-                  Make, n8n, Zapier. Connettiamo i tuoi tool ed eliminiamo la data entry manuale.
+                  Make, n8n, Zapier. Esempio reale: il Review Agent che gestisce le recensioni Google + Trustpilot.
                 </p>
                 <div className="flex flex-wrap items-center gap-1.5 text-[11px] text-text-dim/80" style={{ fontFamily: "var(--font-mono)" }}>
                   <span className="px-2 py-0.5 rounded border border-white/10 bg-bg">n8n</span>
                   <span className="px-2 py-0.5 rounded border border-white/10 bg-bg">Make</span>
                   <span className="px-2 py-0.5 rounded border border-white/10 bg-bg">Zapier</span>
                 </div>
+                <span className="mt-4 inline-flex items-center gap-1.5 text-[11px] font-medium text-lime/80 group-hover:text-lime transition-colors">
+                  Vedi il caso reale <ArrowRight className="size-3" />
+                </span>
               </div>
-            </div>
+            </Link>
 
             <Link
               href="/contatti"
