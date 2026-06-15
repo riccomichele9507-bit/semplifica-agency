@@ -76,6 +76,9 @@ export default function BentoServices() {
                 <div className="w-8 h-px bg-white/15" />
                 <Sparkles className="size-5 text-lime/80" />
               </div>
+              <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-medium text-lime opacity-80 group-hover:opacity-100 transition-opacity">
+                Vedi gli agenti <ArrowRight className="size-3" />
+              </span>
             </div>
           </Link>
 

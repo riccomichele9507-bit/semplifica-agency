@@ -4,6 +4,7 @@ import { site } from "@/lib/site";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import BackHomeButton from "@/components/BackHomeButton";
 import MouseTracker from "@/components/MouseTracker";
 import GlobalBackground from "@/components/GlobalBackground";
 
@@ -31,6 +32,7 @@ export default function RootLayout({
         <GlobalBackground />
         <MouseTracker />
         <Navbar />
+        <BackHomeButton />
         <main>{children}</main>
         <Footer />
         <WhatsAppButton />
