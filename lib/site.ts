@@ -37,12 +37,20 @@ export const services: ServiceArea[] = [
       "ARIA e FILO: agenti WhatsApp che riattivano lead e gestiscono prenotazioni in autonomia, giorno e notte.",
   },
   {
-    slug: "creative-ai",
-    label: "Creative AI",
-    href: "/creative-ai",
-    short: "Contenuti creativi generati con AI.",
+    slug: "workflow-automation",
+    label: "Workflow Automation",
+    href: "/#workflow",
+    short: "Connetti app e automatizza i processi.",
     description:
-      "Immagini, video e contenuti di qualità prodotti con AI — per il tuo brand, i tuoi social, le tue campagne.",
+      "Make.com, n8n, Zapier. Eliminiamo la data entry manuale connettendo i tuoi tool con automazioni custom.",
+  },
+  {
+    slug: "custom-ai",
+    label: "Custom AI",
+    href: "/#custom-ai",
+    short: "Soluzioni AI su misura per la tua attività.",
+    description:
+      "Modelli predittivi, OCR, agenti specifici. Strumenti AI proprietari adattati alla logica della tua azienda.",
   },
 ];
 

@@ -1,15 +1,19 @@
 import Hero from "@/components/sections/Hero";
-import ServiceBlocks from "@/components/sections/ServiceBlocks";
-import Stats from "@/components/sections/Stats";
+import BentoServices from "@/components/sections/BentoServices";
+import ChatPlayground from "@/components/sections/ChatPlayground";
 import Process from "@/components/sections/Process";
+import FAQ from "@/components/sections/FAQ";
+import ContactSection from "@/components/sections/ContactSection";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <ServiceBlocks />
-      <Stats />
+      <BentoServices />
+      <ChatPlayground />
       <Process />
+      <FAQ />
+      <ContactSection />
     </>
   );
 }

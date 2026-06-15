@@ -1,75 +1,54 @@
-"use client";
-
-import { useEffect, useRef } from "react";
 import Link from "next/link";
-import { gsap } from "gsap";
-import { Button } from "@/components/ui/button";
-import { site } from "@/lib/site";
+import { PlayCircle } from "lucide-react";
+import Dashboard3D from "@/components/sections/Dashboard3D";
 
+/** Hero della homepage in stile Innoin: pill eyebrow + H1 serif (Newsreader)
+ *  + CTA con bordo glow + Dashboard3D + horizon ring in fondo. */
 export default function Hero() {
-  const root = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (prefersReduced) return;
-    const ctx = gsap.context(() => {
-      gsap.from(".hero-anim", {
-        opacity: 0,
-        y: 28,
-        duration: 0.9,
-        ease: "power3.out",
-        stagger: 0.12,
-        delay: 0.15,
-      });
-    }, root);
-    return () => ctx.revert();
-  }, []);
-
   return (
-    <section
-      ref={root}
-      className="relative flex min-h-[100svh] items-center overflow-hidden"
-    >
-      {/* Atmosphere */}
+    <section id="home" className="relative flex flex-col overflow-hidden w-full z-10 pt-32 pb-20 items-center">
       <div className="pointer-events-none absolute inset-0 hero-bg" />
-      <div className="pointer-events-none absolute inset-0 grid-overlay" />
 
-      <div className="container-x relative z-10 w-full pt-32 pb-20 md:pt-36">
-        <div className="max-w-4xl">
-          <div className="hero-anim mb-7 inline-flex items-center gap-2 rounded-full border border-amber/30 bg-amber/5 px-4 py-1.5">
-            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-lime" />
-            <span className="text-xs font-medium text-amber">
-              Agenzia AI &amp; Web · {site.location}
-            </span>
+      <div className="text-center max-w-5xl z-20 mx-auto px-6 relative">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-lime/25 bg-lime/5 text-[11px] font-medium mb-8 text-lime shadow-[0_0_20px_rgba(57,231,95,0.08)]">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 bg-lime" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-lime" />
+          </span>
+          <span>Automazione AI per PMI italiane</span>
+        </div>
+
+        <h1 className="font-heading font-medium text-5xl md:text-8xl leading-[0.95] text-white tracking-tight text-balance mb-8">
+          Sistemi intelligenti,<br />
+          <span className="text-gradient">crescita autonoma.</span>
+        </h1>
+
+        <p className="leading-relaxed text-base max-w-2xl mx-auto mb-10 font-light text-text-dim">
+          Costruiamo <span className="text-white font-medium">agenti AI</span>, <span className="text-white font-medium">web app</span> e <span className="text-white font-medium">automazioni</span> su misura per PMI italiane. Da Trani, Puglia.
+        </p>
+
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+          <div className="btn-glow-border group w-full md:w-auto">
+            <Link href="/contatti" className="relative z-10 block px-8 py-3.5 bg-surface text-sm font-semibold rounded-[5px] hover:bg-surface-2 transition-colors text-white">
+              <span className="btn-content-slide">
+                <span className="btn-text-original">Inizia un progetto</span>
+                <span className="btn-text-hover text-lime">Parliamone →</span>
+              </span>
+            </Link>
           </div>
-
-          <h1 className="font-heading font-bold leading-[1.08] tracking-tight text-balance text-[clamp(2.25rem,7vw,5rem)]">
-            <span className="hero-anim block">Costruiamo strumenti</span>
-            <span className="hero-anim block text-gradient">che semplificano.</span>
-          </h1>
-
-          <p className="hero-anim mt-7 max-w-xl text-base leading-relaxed text-text-dim md:mt-8 md:text-lg">
-            {site.description}
-          </p>
-
-          <div className="hero-anim mt-10 flex flex-col gap-3 sm:flex-row">
-            <Button asChild size="lg">
-              <Link href="/contatti">Inizia un progetto →</Link>
-            </Button>
-            <Button asChild size="lg" variant="outline">
-              <Link href="/web-apps">Guarda i lavori</Link>
-            </Button>
-          </div>
+          <Link
+            href="#playground"
+            className="group flex items-center gap-2 transition-all md:w-auto text-sm font-medium bg-surface/60 w-full border-0 rounded-md px-6 py-3 justify-center hover:text-white text-text-dim active:scale-95"
+          >
+            <PlayCircle className="size-4 text-lime/80" />
+            <span className="border-b border-transparent group-hover:border-text-dim/40 transition-all">Prova il Playground</span>
+          </Link>
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-7 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 md:flex">
-        <span className="text-[10px] uppercase tracking-[0.25em] text-text-dim">Scroll</span>
-        <span className="relative h-10 w-px overflow-hidden bg-border">
-          <span className="absolute inset-0 block bg-lime animate-scroll-down" />
-        </span>
-      </div>
+      <Dashboard3D />
+
+      <div className="horizon-ring" />
     </section>
   );
 }

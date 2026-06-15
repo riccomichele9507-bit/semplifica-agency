@@ -4,23 +4,8 @@ import { services, site } from "@/lib/site";
 export default function Footer() {
   return (
     <footer className="relative border-t border-border bg-bg">
-      <div className="container-x py-16">
-        {/* Big CTA line */}
-        <div className="mb-14 max-w-3xl">
-          <h2 className="font-heading text-3xl font-bold leading-tight md:text-5xl">
-            Hai un&apos;idea?{" "}
-            <span className="text-lime">Costruiamola.</span>
-          </h2>
-          <Link
-            href="/contatti"
-            className="mt-6 inline-flex items-center gap-2 rounded-full bg-lime px-6 py-3 text-sm font-bold text-bg transition-transform hover:scale-105 active:scale-95"
-            data-cursor="hover"
-          >
-            Iniziamo a parlarne →
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-2 gap-8 border-t border-border pt-10 md:grid-cols-4">
+      <div className="container-x py-12">
+        <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-1">
               <span className="font-heading text-lg font-bold">Semplifica AI</span>
