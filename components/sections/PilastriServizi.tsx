@@ -6,13 +6,7 @@ import {
   Bot,
   GraduationCap,
   Smartphone,
-  Mic,
-  FileText,
-  Star,
-  MessageCircle,
-  Calendar,
   Sparkles,
-  type LucideIcon,
 } from "lucide-react";
 import Reveal from "@/components/anim/Reveal";
 
@@ -96,20 +90,20 @@ type Agente = {
   nome: string;
   categoria: string;
   desc: string;
-  Icon: LucideIcon;
+  iconImage: string;
   href: string;
 };
 
 /** 5 agenti, tutti con la STESSA struttura grafica per coerenza visiva:
- *  icon Lucide in tinted lime square 56×56, nome bold, categoria uppercase
- *  text-dim, descrizione 2 righe, CTA "Scopri di più". */
+ *  cube box icon PNG generata (stile ARIA/FILO neon lime), nome bold,
+ *  categoria uppercase text-dim, descrizione, CTA "Scopri di più". */
 const AGENTI: Agente[] = [
   {
     nome: "ARIA",
     categoria: "Lead reactivation · WhatsApp",
     desc:
       "Si collega al CRM, scrive ai contatti dormienti su WhatsApp con messaggi personalizzati e prenota la call.",
-    Icon: MessageCircle,
+    iconImage: "/agents/aria-box.png",
     href: "/aria",
   },
   {
@@ -117,7 +111,7 @@ const AGENTI: Agente[] = [
     categoria: "Prenotazioni · WhatsApp",
     desc:
       "Riceve richieste di prenotazione, verifica la disponibilità in tempo reale, conferma e manda i reminder.",
-    Icon: Calendar,
+    iconImage: "/agents/filo-box.png",
     href: "/filo",
   },
   {
@@ -125,7 +119,7 @@ const AGENTI: Agente[] = [
     categoria: "Risposta vocale · 24/7",
     desc:
       "Risponde al telefono in italiano con voce naturale. Qualifica la richiesta, prenota, instrada all'operatore.",
-    Icon: Mic,
+    iconImage: "/agents/voice-box.png",
     href: "/voice-agents",
   },
   {
@@ -133,7 +127,7 @@ const AGENTI: Agente[] = [
     categoria: "B2B · Email → Preventivo",
     desc:
       "Legge le email, capisce le richieste d'offerta, arricchisce i dati e genera il preventivo PDF.",
-    Icon: FileText,
+    iconImage: "/agents/quotebot-box.png",
     href: "/quotebot",
   },
   {
@@ -141,21 +135,26 @@ const AGENTI: Agente[] = [
     categoria: "Recensioni · n8n + Slack",
     desc:
       "Monitora Google e Trustpilot, genera risposte AI, ti chiede l'approvazione su Slack e pubblica.",
-    Icon: Star,
+    iconImage: "/agents/review-box.png",
     href: "/workflow-automation",
   },
 ];
 
 function AgenteCard({ a }: { a: Agente }) {
-  const Icon = a.Icon;
   return (
     <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface p-6 transition-all hover:-translate-y-1 hover:border-lime/40 hover:bg-surface-2 md:p-7">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-lime/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
-      {/* Icon — STESSO container per tutti per coerenza */}
-      <span className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl border border-lime/20 bg-lime/[0.08] text-lime">
-        <Icon className="h-6 w-6" strokeWidth={1.75} />
-      </span>
+      {/* Cube box icon — coerente con stile ARIA/FILO neon */}
+      <div className="mb-5 flex h-20 w-20 items-center justify-center overflow-hidden rounded-2xl bg-black/40">
+        <Image
+          src={a.iconImage}
+          alt={`${a.nome} cube icon`}
+          width={160}
+          height={160}
+          className="h-20 w-20 object-cover transition-transform duration-300 group-hover:scale-105"
+        />
+      </div>
 
       {/* Name */}
       <h4 className="font-heading text-xl font-bold leading-tight text-text transition-colors group-hover:text-lime md:text-2xl">
@@ -275,8 +274,8 @@ export default function PilastriServizi() {
 
                 {/* Card 6: agente custom */}
                 <div className="group relative flex h-full flex-col items-start justify-center rounded-2xl border border-dashed border-white/15 bg-white/[0.015] p-6 transition-all hover:border-lime/40 hover:bg-lime/[0.03] md:p-7">
-                  <span className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl border border-lime/20 bg-lime/[0.08] text-lime">
-                    <Sparkles className="h-6 w-6" strokeWidth={1.75} />
+                  <span className="mb-5 flex h-20 w-20 items-center justify-center rounded-2xl border border-lime/20 bg-lime/[0.08] text-lime">
+                    <Sparkles className="h-8 w-8" strokeWidth={1.5} />
                   </span>
                   <h4 className="font-heading text-xl font-bold leading-tight text-text md:text-2xl">
                     Un agente <span className="text-gradient">su misura</span>
