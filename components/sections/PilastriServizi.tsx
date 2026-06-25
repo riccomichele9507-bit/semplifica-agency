@@ -6,7 +6,6 @@ import {
   Bot,
   GraduationCap,
   Smartphone,
-  Sparkles,
   Mail,
   BarChart3,
   Share2,
@@ -319,35 +318,11 @@ export default function PilastriServizi() {
                 </p>
               </div>
 
-              {/* Costellazione agenti — 5 card stessa struttura grafica */}
-              <Reveal stagger staggerAmount={0.06} className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {/* Costellazione agenti — 4 card stessa struttura grafica */}
+              <Reveal stagger staggerAmount={0.06} className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 {AGENTI.map((a) => (
                   <AgenteCard key={a.nome} a={a} />
                 ))}
-
-                {/* Card 6: agente custom */}
-                <div className="group relative flex h-full flex-col items-start justify-center rounded-2xl border border-dashed border-white/15 bg-white/[0.015] p-6 transition-all hover:border-lime/40 hover:bg-lime/[0.03] md:p-7">
-                  <span className="mb-5 flex h-20 w-20 items-center justify-center rounded-2xl border border-lime/20 bg-lime/[0.08] text-lime">
-                    <Sparkles className="h-8 w-8" strokeWidth={1.5} />
-                  </span>
-                  <h4 className="font-heading text-xl font-bold leading-tight text-text md:text-2xl">
-                    Un agente <span className="text-gradient">su misura</span>
-                  </h4>
-                  <p className="mt-1 text-[11px] font-medium uppercase tracking-wider text-text-dim">
-                    Custom · Su richiesta
-                  </p>
-                  <p className="mt-4 flex-1 text-sm leading-relaxed text-text-dim">
-                    Hai un processo specifico? Costruiamo l&apos;agente partendo dal tuo flusso,
-                    non dal nostro template.
-                  </p>
-                  <Link
-                    href="/contatti"
-                    className="mt-6 inline-flex items-center gap-1.5 rounded-full border border-lime/30 bg-lime/[0.06] px-4 py-2 text-xs font-semibold text-lime transition-colors hover:border-lime/60 hover:bg-lime/10"
-                  >
-                    Parliamone
-                    <ArrowUpRight className="h-3.5 w-3.5" />
-                  </Link>
-                </div>
               </Reveal>
             </div>
           </Reveal>
