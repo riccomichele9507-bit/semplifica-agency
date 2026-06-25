@@ -5,10 +5,12 @@ export const site = {
   email: "michelericco95@gmail.com",
   phone: "+39 346 248 2556",
   whatsapp: "https://wa.me/393462482556",
+  linkedin: "https://www.linkedin.com/in/michelericco/",
+  calendly: "https://cal.com/semplifica-ai/30min",
   url: "https://semplifica.ai",
-  tagline: "Costruiamo strumenti che semplificano.",
+  tagline: "Soluzioni AI su misura per la tua azienda.",
   description:
-    "Web app, agenti AI e contenuti creativi su misura per PMI italiane. Niente template, niente promesse vuote. Solo strumenti che funzionano.",
+    "Costruiamo agenti AI, web app e workflow automation per PMI italiane. Una persona, non un call center. Da Trani, Puglia.",
 };
 
 export type ServiceArea = {

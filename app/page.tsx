@@ -1,19 +1,25 @@
 import Hero from "@/components/sections/Hero";
-import BentoServices from "@/components/sections/BentoServices";
-import ChatPlayground from "@/components/sections/ChatPlayground";
-import Process from "@/components/sections/Process";
-import FAQ from "@/components/sections/FAQ";
-import ContactSection from "@/components/sections/ContactSection";
+import PartnersStrip from "@/components/sections/PartnersStrip";
+import PilastriServizi from "@/components/sections/PilastriServizi";
+import ProcessoTimeline from "@/components/sections/ProcessoTimeline";
+import CaseStudyGrid from "@/components/sections/CaseStudyGrid";
+import BenefitiGrid from "@/components/sections/BenefitiGrid";
+import FAQAccelera from "@/components/sections/FAQAccelera";
+import FoundatoreCard from "@/components/sections/FoundatoreCard";
+import CTAFinale from "@/components/sections/CTAFinale";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <BentoServices />
-      <ChatPlayground />
-      <Process />
-      <FAQ />
-      <ContactSection />
+      <PartnersStrip />
+      <PilastriServizi />
+      <ProcessoTimeline />
+      <CaseStudyGrid />
+      <BenefitiGrid />
+      <FAQAccelera />
+      <FoundatoreCard />
+      <CTAFinale />
     </>
   );
 }
