@@ -12,7 +12,7 @@ const STEPS = [
     titolo: "Analisi",
     Icon: Microscope,
     desc:
-      "Capiamo cosa fai oggi e dove perdi tempo. Workshop di 60 min, mappiamo i processi insieme e identifichiamo i punti di automazione ad alto impatto.",
+      "Una call di 60 minuti. Capiamo cosa fai oggi, dove perdi tempo, e cosa vale la pena automatizzare per primo.",
   },
   {
     n: "02",
@@ -20,7 +20,7 @@ const STEPS = [
     titolo: "Sviluppo PoC",
     Icon: FlaskConical,
     desc:
-      "Costruiamo un prototipo funzionante del primo flusso. Lo testiamo insieme su casi reali. Tu decidi se ha senso continuare prima di investire nel pieno.",
+      "Costruiamo un prototipo del primo flusso. Lo proviamo insieme su casi veri. Se non funziona, lo dici tu, prima di investire altri soldi.",
   },
   {
     n: "03",
@@ -28,7 +28,7 @@ const STEPS = [
     titolo: "Integrazione",
     Icon: GitMerge,
     desc:
-      "Colleghiamo l'agente o l'automazione ai tuoi tool (CRM, WhatsApp, calendario, gestionale). Test, training del team, go-live.",
+      "Colleghiamo l'agente o l'automazione ai tuoi tool: CRM, WhatsApp, calendario, gestionale. Test, formazione del team, go-live.",
   },
   {
     n: "04",
@@ -36,7 +36,7 @@ const STEPS = [
     titolo: "Ottimizzazione",
     Icon: Repeat,
     desc:
-      "Monitoriamo le performance, miglioriamo il modello, espandiamo l'agente ad altri processi. Non scompariamo dopo la consegna.",
+      "Dopo il go-live restiamo. Monitoriamo i numeri, miglioriamo l'agente, lo estendiamo ad altri processi quando ha senso.",
   },
 ];
 
@@ -56,8 +56,8 @@ export default function ProcessoTimeline() {
             <span className="text-gradient">go-live</span>.
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-text-dim md:text-lg">
-            Quattro fasi chiare, niente sorprese. Tu sai sempre dove siamo e cosa stiamo
-            costruendo. Niente PowerPoint, solo lavoro.
+            Quattro fasi chiare, zero sorprese. Tu sai sempre dove siamo e cosa stiamo
+            costruendo. Aggiornamenti WhatsApp ogni 2-3 giorni, niente PowerPoint.
           </p>
         </Reveal>
 

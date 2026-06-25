@@ -18,8 +18,8 @@ export default function CTAFinale() {
             <span className="text-gradient">dipendente AI</span>.
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-text-dim md:text-lg">
-            Una call di 20 minuti. Ti dico se possiamo aiutarti davvero, e quanto costa.
-            Niente impegno, niente pitch.
+            Una call di 20 minuti. Ti dico se possiamo aiutarti davvero e quanto costa.
+            Nessun impegno, nessun pitch in stile vendita.
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">

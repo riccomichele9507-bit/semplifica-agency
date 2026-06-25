@@ -24,7 +24,7 @@ export default function Hero() {
             Novità
           </span>
           <span className="pr-2 font-medium text-text">
-            Agenti AI vocali in italiano · 24/7
+            Agenti AI vocali in italiano, 24/7
           </span>
         </div>
 
@@ -37,8 +37,9 @@ export default function Hero() {
 
         {/* Sub */}
         <p className="mx-auto mt-7 max-w-2xl text-base leading-relaxed text-text-dim md:mt-9 md:text-lg">
-          La nostra missione è accelerare la crescita della tua azienda attraverso
-          l&apos;integrazione di soluzioni AI nei tuoi processi.
+          Aiutiamo le PMI italiane a integrare l&apos;AI nei processi reali. Agenti che
+          rispondono al telefono, web app che fanno ordini, automazioni che lavorano
+          mentre tu sei chiuso.
         </p>
 
         {/* CTA — primaria lime, secondaria outline scuro */}

@@ -11,25 +11,25 @@ const FASI = [
     sigla: "E",
     nome: "Education",
     Icon: BookOpen,
-    desc: "Formiamo il tuo team a usare l'AI nei processi reali. Workshop pratici, niente teoria astratta.",
+    desc: "Formiamo il tuo team a usare l'AI nei processi di tutti i giorni. Workshop pratici, niente teoria astratta.",
   },
   {
     sigla: "Di",
     nome: "Discovery",
     Icon: Compass,
-    desc: "Mappiamo i processi della tua azienda e troviamo cosa ha senso automatizzare prima. ROI alla mano.",
+    desc: "Mappiamo i processi della tua azienda e troviamo cosa ha senso automatizzare per primo. Numeri alla mano.",
   },
   {
     sigla: "Bu",
     nome: "Build",
     Icon: Hammer,
-    desc: "Costruiamo la soluzione su misura, in giorni. PoC funzionante prima di investire nel pieno.",
+    desc: "Costruiamo la soluzione su misura in giorni. Prototipo funzionante prima di investire nel pieno.",
   },
   {
     sigla: "S",
     nome: "SaaS",
     Icon: Cloud,
-    desc: "Mettiamo in produzione e manteniamo viva la soluzione. Monitoraggio, aggiornamenti, supporto continuo.",
+    desc: "Mettiamo online e manteniamo viva la soluzione. Monitoraggio, aggiornamenti, supporto continuo.",
   },
 ];
 
@@ -55,10 +55,10 @@ export default function AIAdoptionProgram() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-text-dim md:mt-8 md:text-lg">
-            Partiamo da lì. Ti accompagniamo passo dopo passo, dal capire l&apos;AI al metterla
-            in produzione. Non solo strumenti: il nostro framework{" "}
-            <span className="font-semibold text-text">EDiBuS</span> porta l&apos;AI dentro
-            l&apos;azienda, senza salti nel vuoto.
+            Partiamo da lì. Ti accompagniamo passo dopo passo, da capire cosa fa davvero
+            l&apos;AI a metterla in produzione. Il nostro framework{" "}
+            <span className="font-semibold text-text">EDiBuS</span> porta l&apos;AI
+            dentro l&apos;azienda senza salti nel vuoto.
           </p>
         </Reveal>
 

@@ -50,7 +50,7 @@ export default function FoundatoreCard() {
                 <p className="mt-5 text-sm leading-relaxed text-text-dim md:text-base">
                   Costruisco web app, agenti AI e workflow per ristoranti e PMI italiane.
                   Scrivo io il codice, parlo io con i clienti, rispondo io al telefono.
-                  Niente catene di intermediari — il preventivo che ricevi te lo do io, e
+                  Niente catene di intermediari. Il preventivo che ricevi te lo do io, e
                   se ti dico una data la rispetto.
                 </p>
 

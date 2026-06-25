@@ -40,8 +40,8 @@ export default function ProgettiCustom() {
               </h2>
 
               <p className="mt-6 max-w-xl text-base leading-relaxed text-text-dim md:text-lg">
-                Trasformiamo le tue idee in sistemi AI autonomi ed efficienti. Partiamo dal
-                tuo flusso, non da un template — l&apos;agente o l&apos;automazione che
+                Trasformiamo le tue idee in sistemi AI autonomi ed efficienti. Partiamo
+                dal tuo flusso, non da un template. L&apos;agente o l&apos;automazione che
                 costruiamo è solo tua.
               </p>
 

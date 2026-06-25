@@ -4,39 +4,39 @@ import Reveal from "@/components/anim/Reveal";
 const FAQS = [
   {
     q: "Quanto tempo serve per partire?",
-    a: "Per una web app di ordering: 10-14 giorni lavorativi. Per un agente AI: 3-5 settimane (1 settimana di analisi + 2-3 di sviluppo PoC + integrazione). Tutto è scritto nella proposta che riceverai entro 48h dalla call.",
+    a: "Per una web app di ordering: 10-14 giorni lavorativi. Per un agente AI: 3-5 settimane in totale (1 settimana di analisi, 2-3 di sviluppo del prototipo, poi l'integrazione). Tutto scritto nella proposta che ricevi entro 48 ore dalla call.",
   },
   {
     q: "Quanto costa?",
-    a: "Dipende dalla complessità e dall'integrazione necessaria. Discutiamo i numeri in call e ti mandiamo una proposta scritta entro 48h. Per dare un riferimento: una web app di ordering parte da una fascia bassa-media, un agente AI da una fascia media. Niente vincoli pluriennali.",
+    a: "Dipende dalla complessità e da cosa devi integrare. I numeri li discutiamo in call e ti mandiamo una proposta scritta entro 48 ore. Niente vincoli pluriennali e nessuna sorpresa in fattura.",
   },
   {
     q: "Chi possiede il codice, i dati e i clienti?",
-    a: "Tu. Tutto sotto il tuo dominio, sul tuo Stripe, sul tuo Google Business. Noi configuriamo, addestriamo, manteniamo. Tu sei sempre proprietario.",
+    a: "Tu. Tutto sta sotto il tuo dominio, sul tuo Stripe, sul tuo Google Business. Noi configuriamo, addestriamo, manteniamo. Il proprietario sei sempre tu.",
   },
   {
     q: "Cosa succede se l'agente sbaglia?",
-    a: "Tutti gli agenti che costruiamo hanno una modalità human-in-the-loop: nei casi critici (preventivi, recensioni negative, prenotazioni complesse) la risposta va prima a te per approvazione. Decidi tu il livello di autonomia, ed è sempre modificabile.",
+    a: "Gli agenti hanno una modalità human-in-the-loop. Nei casi critici (preventivi, recensioni negative, prenotazioni complesse) la risposta arriva prima a te per l'approvazione. Decidi tu il livello di autonomia, e puoi cambiarlo quando vuoi.",
   },
   {
-    q: "Funziona se ho già il mio gestionale / CRM?",
-    a: "Sì. Lavoriamo principalmente con Make, n8n e Zapier per le integrazioni: ci colleghiamo a qualsiasi tool che abbia API o webhook (Shopify, HubSpot, Salesforce, Pipedrive, Notion, Airtable, Google Workspace, Microsoft 365, gestionali italiani comuni).",
+    q: "Funziona se ho già il mio gestionale o CRM?",
+    a: "Sì. Ci integriamo con qualsiasi tool che abbia API o webhook: Shopify, HubSpot, Salesforce, Pipedrive, Notion, Airtable, Google Workspace, Microsoft 365 e i gestionali italiani più comuni. Se hai un dubbio sul tuo, scrivici.",
   },
   {
     q: "Cosa succede con la mia privacy e quella dei miei clienti?",
-    a: "Lavoriamo solo con provider conformi al GDPR per EU. I dati restano su server europei dove possibile. Firmiamo NDA se serve e DPA quando trattiamo dati personali. Niente training di modelli AI sui tuoi dati senza consenso esplicito.",
+    a: "Usiamo solo provider conformi al GDPR per l'Unione Europea. I dati restano su server europei dove possibile. Firmiamo NDA se serve e DPA quando trattiamo dati personali. Mai usato i tuoi dati per addestrare modelli senza consenso esplicito.",
   },
   {
     q: "Mi seguite anche dopo il go-live?",
-    a: "Sì. Manutenzione, aggiornamenti, monitoraggio degli errori e ottimizzazione continua sono inclusi in un piano mensile. Non sparisci dopo la consegna — anzi, è dopo il go-live che inizia il lavoro vero di affinamento.",
+    a: "Sì. Manutenzione, aggiornamenti, monitoraggio degli errori e ottimizzazione continua sono inclusi nel piano mensile. La consegna non è la fine: è quando inizia il lavoro vero di affinamento.",
   },
   {
     q: "Per quali settori lavorate?",
-    a: "Ristorazione (ordering, prenotazioni), professionisti B2B (preventivi, lead), beauty/wellness/sport (booking), e in generale PMI italiane con processi ripetitivi ad alto volume. Se hai un dubbio, scrivici: ti diciamo se ha senso senza giri di parole.",
+    a: "Ristorazione (ordering e prenotazioni), professionisti B2B (preventivi e lead), beauty, wellness, sport (booking), e in generale PMI italiane con processi ripetitivi. Se hai un dubbio, scrivici: ti diciamo se ha senso senza giri di parole.",
   },
   {
     q: "Posso cancellare quando voglio?",
-    a: "Sì. Il piano mensile si cancella in qualsiasi momento. Manteniamo online la tua web app o la portiamo offline, decidi tu. Niente clausole-trappola, niente vincoli pluriennali.",
+    a: "Sì. Il piano mensile si cancella in qualsiasi momento. La tua web app resta online o la portiamo offline, decidi tu. Niente clausole-trappola, niente vincoli pluriennali.",
   },
 ];
 

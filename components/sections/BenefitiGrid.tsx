@@ -7,32 +7,32 @@ const BENEFICI = [
   {
     Icon: Gauge,
     titolo: "Produttività",
-    desc: "Tu e il tuo team smettete di fare lavoro ripetitivo. Più tempo per i clienti, meno per i tool.",
+    desc: "Tu e il tuo team smettete di fare il lavoro ripetitivo. Più tempo per i clienti, meno per i gestionali.",
   },
   {
     Icon: Heart,
     titolo: "Customer Experience",
-    desc: "Risposte immediate su WhatsApp e telefono. Niente clienti persi nelle ore di chiusura.",
+    desc: "Risposte immediate su WhatsApp e telefono. Nessun cliente perso nelle ore di chiusura o nel weekend.",
   },
   {
     Icon: Clock,
     titolo: "Operatività 24/7",
-    desc: "Gli agenti non vanno in ferie, non si ammalano, non perdono le chiamate del weekend.",
+    desc: "Gli agenti non vanno in ferie, non si ammalano e non perdono le chiamate del sabato sera.",
   },
   {
     Icon: TrendingDown,
-    titolo: "Riduzione costi",
-    desc: "Meno errori manuali, meno commissioni delivery, meno tempo perso in mansioni a basso valore.",
+    titolo: "Costi sotto controllo",
+    desc: "Meno errori manuali, meno commissioni delivery, meno ore perse in lavori a basso valore.",
   },
   {
     Icon: BarChart3,
     titolo: "Dati e analisi",
-    desc: "Ogni conversazione, ogni ordine, ogni recensione — tutto loggato e analizzabile.",
+    desc: "Ogni conversazione, ogni ordine, ogni recensione finisce in un report che leggi in 5 minuti.",
   },
   {
     Icon: Layers,
     titolo: "Scalabilità",
-    desc: "Cresci senza assumere nuovo personale per i task automatizzabili. L'agente scala con te.",
+    desc: "Cresci senza dover assumere per i task automatizzabili. L'agente scala con te.",
   },
 ];
 
@@ -48,7 +48,7 @@ export default function BenefitiGrid() {
             </span>
           </div>
           <h2 className="font-heading text-4xl font-medium leading-[1.05] tracking-tight md:text-6xl">
-            Cosa <span className="text-gradient">ottieni</span>.
+            Cosa <span className="text-gradient">ottieni davvero</span>.
           </h2>
         </Reveal>
 
