@@ -7,6 +7,12 @@ import {
   GraduationCap,
   Smartphone,
   Sparkles,
+  Mail,
+  BarChart3,
+  Share2,
+  FileSpreadsheet,
+  Check,
+  Clock,
 } from "lucide-react";
 import Reveal from "@/components/anim/Reveal";
 
@@ -60,27 +66,82 @@ function VisualOrdering() {
 }
 
 function VisualWorkflow() {
+  // Task list "user-friendly" stile Accelera: niente diagrammi tecnici,
+  // solo task ad alto livello che il cliente NON tecnico capisce subito.
+  const tasks = [
+    { Icon: FileSpreadsheet, titolo: "Dati cliente inseriti nel CRM", sub: "Da email · automatico", done: true },
+    { Icon: Mail, titolo: "Email di follow-up inviata", sub: "12 contatti · oggi", done: true },
+    { Icon: BarChart3, titolo: "Report mensile pronto", sub: "Aggiornato 5 min fa", done: true },
+    { Icon: Share2, titolo: "Post programmato sui social", sub: "Lun 9:00 · Instagram", running: true },
+    { Icon: Clock, titolo: "Promemoria pagamenti scaduti", sub: "3 fatture · in coda", pending: true },
+  ];
+
   return (
     <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-surface to-bg">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(57,231,95,0.12),transparent_60%)]" />
-      <div className="absolute inset-0 p-6">
-        <Image
-          src="/workflow/review-agent-canvas.png"
-          alt="Workflow n8n Review Agent"
-          width={1200}
-          height={400}
-          sizes="(max-width:1024px) 100vw, 540px"
-          className="h-full w-full rounded-lg object-cover object-left opacity-90"
-        />
-      </div>
-      <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between rounded-lg border border-white/10 bg-bg/85 px-3 py-2 text-[11px] backdrop-blur">
-        <span className="flex items-center gap-2 text-text">
-          <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-lime" />
-          Review Agent · n8n
-        </span>
-        <span className="text-text-dim" style={{ fontFamily: "var(--font-mono)" }}>
-          18 nodi · 6 step
-        </span>
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(57,231,95,0.10),transparent_60%)]" />
+
+      <div className="absolute inset-0 flex items-center justify-center p-6 md:p-8">
+        <div className="w-full max-w-sm rounded-xl border border-white/10 bg-bg/80 backdrop-blur">
+          {/* Header */}
+          <div className="flex items-center justify-between border-b border-white/5 px-4 py-2.5">
+            <span className="text-xs font-semibold text-text">Tutti i task</span>
+            <span
+              className="rounded-full border border-lime/25 bg-lime/10 px-2 py-0.5 text-[9px] font-medium text-lime"
+              style={{ fontFamily: "var(--font-mono)" }}
+            >
+              live
+            </span>
+          </div>
+
+          {/* Task rows */}
+          <ul className="divide-y divide-white/5">
+            {tasks.map((t) => {
+              const Icon = t.Icon;
+              const isDone = t.done;
+              const isRunning = t.running;
+              return (
+                <li key={t.titolo} className="flex items-center gap-3 px-4 py-2.5">
+                  <span
+                    className={[
+                      "flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-lg border",
+                      isDone
+                        ? "border-white/10 bg-white/[0.03] text-text-dim"
+                        : isRunning
+                        ? "border-lime/25 bg-lime/10 text-lime"
+                        : "border-amber/25 bg-amber/10 text-amber",
+                    ].join(" ")}
+                  >
+                    <Icon className="h-3.5 w-3.5" />
+                  </span>
+
+                  <div className="min-w-0 flex-1">
+                    <p className="truncate text-[11px] font-medium text-text">{t.titolo}</p>
+                    <p className="truncate text-[10px] text-text-dim">{t.sub}</p>
+                  </div>
+
+                  <span
+                    className={[
+                      "flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full",
+                      isDone
+                        ? "bg-lime/15 text-lime"
+                        : isRunning
+                        ? "bg-lime/10 text-lime"
+                        : "bg-amber/10 text-amber",
+                    ].join(" ")}
+                  >
+                    {isDone ? (
+                      <Check className="h-3 w-3" />
+                    ) : isRunning ? (
+                      <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-current" />
+                    ) : (
+                      <Clock className="h-3 w-3" />
+                    )}
+                  </span>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
     </div>
   );
@@ -129,14 +190,6 @@ const AGENTI: Agente[] = [
       "Legge le email, capisce le richieste d'offerta, arricchisce i dati e genera il preventivo PDF.",
     iconImage: "/agents/quotebot-box.png",
     href: "/quotebot",
-  },
-  {
-    nome: "Review Agent",
-    categoria: "Recensioni · n8n + Slack",
-    desc:
-      "Monitora Google e Trustpilot, genera risposte AI, ti chiede l'approvazione su Slack e pubblica.",
-    iconImage: "/agents/review-box.png",
-    href: "/workflow-automation",
   },
 ];
 
@@ -317,15 +370,15 @@ export default function PilastriServizi() {
                 </h3>
                 <p className="mt-5 text-base leading-relaxed text-text-dim md:text-lg">
                   Ti aiutiamo a semplificare le operazioni interne automatizzando i flussi di
-                  lavoro manuali come inserimento dati, creazione di report, gestione dei
-                  social, gestione delle mail — risparmiando tempo e riducendo gli errori.
+                  lavoro manuali come l&apos;inserimento dati, la creazione di report, gestione
+                  dei social, gestione delle mail, risparmiando tempo e riducendo gli errori.
                 </p>
                 <div className="mt-6 flex flex-wrap gap-2">
                   {[
-                    "n8n · Make · Zapier",
-                    "Recensioni Google/Trustpilot",
-                    "Email → CRM",
-                    "Lead enrichment",
+                    "Inserimento dati",
+                    "Creazione report",
+                    "Gestione social",
+                    "Gestione email",
                   ].map((pill) => (
                     <span
                       key={pill}
