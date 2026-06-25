@@ -1,7 +1,6 @@
 import Hero from "@/components/sections/Hero";
 import PartnersStrip from "@/components/sections/PartnersStrip";
 import PilastriServizi from "@/components/sections/PilastriServizi";
-import CostellazioneAgenti from "@/components/sections/CostellazioneAgenti";
 import ProcessoTimeline from "@/components/sections/ProcessoTimeline";
 import AIAdoptionProgram from "@/components/sections/AIAdoptionProgram";
 import BenefitiGrid from "@/components/sections/BenefitiGrid";
@@ -15,7 +14,6 @@ export default function Home() {
       <Hero />
       <PartnersStrip />
       <PilastriServizi />
-      <CostellazioneAgenti />
       <ProcessoTimeline />
       <AIAdoptionProgram />
       <BenefitiGrid />
