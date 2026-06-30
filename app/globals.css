@@ -343,6 +343,24 @@
 .typing-dot:nth-child(1) { animation-delay: -0.32s; }
 .typing-dot:nth-child(2) { animation-delay: -0.16s; }
 
+/* ====================================
+   21ST-STYLE ANIMATED GRAPHICS
+   (border-beam, aurora, shimmer)
+   ==================================== */
+@keyframes bb-spin { to { transform: rotate(360deg); } }
+@keyframes aurora-drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(36px, -28px) scale(1.12); }
+  66% { transform: translate(-28px, 22px) scale(0.94); }
+}
+@keyframes shimmer-sweep {
+  0% { transform: translateX(-160%) skewX(-14deg); }
+  100% { transform: translateX(260%) skewX(-14deg); }
+}
+@utility animate-aurora { animation: aurora-drift 20s ease-in-out infinite; }
+@utility animate-aurora-slow { animation: aurora-drift 28s ease-in-out infinite; }
+@utility animate-shimmer { animation: shimmer-sweep 3.4s ease-in-out infinite; }
+
 /* Infinite marquee (portfolio) */
 @keyframes marquee-x { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .marquee-track {
