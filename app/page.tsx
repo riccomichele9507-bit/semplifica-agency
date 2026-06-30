@@ -1,25 +1,27 @@
 import Hero from "@/components/sections/Hero";
-import PartnersStrip from "@/components/sections/PartnersStrip";
-import PilastriServizi from "@/components/sections/PilastriServizi";
-import ProgettiCustom from "@/components/sections/ProgettiCustom";
-import ProcessoTimeline from "@/components/sections/ProcessoTimeline";
-import BenefitiGrid from "@/components/sections/BenefitiGrid";
-import FAQAccelera from "@/components/sections/FAQAccelera";
-import FoundatoreCard from "@/components/sections/FoundatoreCard";
-import CTAFinale from "@/components/sections/CTAFinale";
+import LiveFeed from "@/components/sections/LiveFeed";
+import StackTecnologico from "@/components/sections/StackTecnologico";
+import ScegliPercorso from "@/components/sections/ScegliPercorso";
+import CasoReale from "@/components/sections/CasoReale";
+import ComeLavoriamo from "@/components/sections/ComeLavoriamo";
+import PercheSemplifica from "@/components/sections/PercheSemplifica";
+import FAQ from "@/components/sections/FAQ";
+import ChiSiamo from "@/components/sections/ChiSiamo";
+import Contatti from "@/components/sections/Contatti";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <PartnersStrip />
-      <PilastriServizi />
-      <ProgettiCustom />
-      <ProcessoTimeline />
-      <BenefitiGrid />
-      <FAQAccelera />
-      <FoundatoreCard />
-      <CTAFinale />
+      <LiveFeed />
+      <StackTecnologico />
+      <ScegliPercorso />
+      <CasoReale />
+      <ComeLavoriamo />
+      <PercheSemplifica />
+      <FAQ />
+      <ChiSiamo />
+      <Contatti />
     </>
   );
 }

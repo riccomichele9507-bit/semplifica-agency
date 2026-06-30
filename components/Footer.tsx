@@ -1,28 +1,42 @@
 import Link from "next/link";
-import { services, site } from "@/lib/site";
+import { site } from "@/lib/site";
+
+const NAV = [
+  { label: "Servizi", href: "#servizi" },
+  { label: "Demo", href: "#demo" },
+  { label: "Storia", href: "#storia" },
+  { label: "Contatti", href: "#contatti" },
+];
+
+const STACK = ["Claude API", "OpenAI", "n8n / Make", "Supabase"];
 
 export default function Footer() {
   return (
     <footer className="relative border-t border-border bg-bg">
-      <div className="container-x py-12">
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+      <div className="container-x py-16">
+        <div className="grid grid-cols-2 gap-10 md:grid-cols-4">
           <div className="col-span-2 md:col-span-1">
-            <Link href="/" className="flex items-center gap-1">
-              <span className="font-heading text-lg font-bold">Semplifica AI</span>
-              <span className="mb-2 h-1.5 w-1.5 rounded-full bg-lime" />
+            <Link href="/" className="flex items-center gap-2">
+              <span className="font-heading text-lg font-bold text-text">Semplifica AI</span>
+              <span className="h-1.5 w-1.5 rounded-full bg-lime" />
             </Link>
-            <p className="mt-3 max-w-xs text-sm text-text-dim">
-              {site.description}
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-text-dim">
+              Aiutiamo gli imprenditori italiani a integrare l&apos;AI nei loro processi.
+            </p>
+            <p className="mt-3 text-sm text-text-dim">
+              {site.location} · {site.email}
             </p>
           </div>
 
           <div>
-            <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-text-dim">Servizi</p>
-            <ul className="space-y-2">
-              {services.map((s) => (
-                <li key={s.slug}>
-                  <Link href={s.href} className="text-sm text-text-dim transition-colors hover:text-lime" data-cursor="hover">
-                    {s.label}
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-text-dim">
+              Navigazione
+            </p>
+            <ul className="space-y-2.5">
+              {NAV.map((l) => (
+                <li key={l.label}>
+                  <Link href={l.href} className="text-sm text-text-dim transition-colors hover:text-lime">
+                    {l.label}
                   </Link>
                 </li>
               ))}
@@ -30,25 +44,38 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-text-dim">Agenzia</p>
-            <ul className="space-y-2">
-              <li><Link href="/chi-siamo" className="text-sm text-text-dim transition-colors hover:text-lime" data-cursor="hover">Chi siamo</Link></li>
-              <li><Link href="/contatti" className="text-sm text-text-dim transition-colors hover:text-lime" data-cursor="hover">Contatti</Link></li>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-text-dim">
+              Stack
+            </p>
+            <ul className="space-y-2.5">
+              {STACK.map((s) => (
+                <li key={s} className="text-sm text-text-dim">{s}</li>
+              ))}
             </ul>
           </div>
 
           <div>
-            <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-text-dim">Contatti</p>
-            <ul className="space-y-2">
-              <li><a href={`mailto:${site.email}`} className="text-sm text-text-dim transition-colors hover:text-lime" data-cursor="hover">{site.email}</a></li>
-              <li><a href={site.whatsapp} target="_blank" rel="noopener noreferrer" className="text-sm text-text-dim transition-colors hover:text-lime" data-cursor="hover">WhatsApp</a></li>
-              <li className="text-sm text-text-dim">{site.location}</li>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-text-dim">
+              Social
+            </p>
+            <ul className="space-y-2.5">
+              <li>
+                <a href={site.linkedin} target="_blank" rel="noopener noreferrer" className="text-sm text-text-dim transition-colors hover:text-lime">
+                  LinkedIn
+                </a>
+              </li>
+              <li className="text-sm text-text-dim/60">Instagram (presto)</li>
+              <li>
+                <a href={site.whatsapp} target="_blank" rel="noopener noreferrer" className="text-sm text-text-dim transition-colors hover:text-lime">
+                  WhatsApp
+                </a>
+              </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col items-start justify-between gap-2 border-t border-border pt-6 text-xs text-text-dim md:flex-row md:items-center">
-          <p>© {new Date().getFullYear()} {site.name}. {site.location}.</p>
+        <div className="mt-12 border-t border-border pt-6 text-xs text-text-dim">
+          © 2026 Semplifica AI · Tutti i diritti riservati
         </div>
       </div>
     </footer>

@@ -1,46 +1,56 @@
-import { ChevronDown } from "lucide-react";
+/** S8 — FAQ (6 domande). details/summary nativo, nessuna animazione. */
 
-const faqs = [
+const FAQS = [
   {
-    q: "Quanto costa una web app o un agente AI?",
-    a: "Dipende dal progetto: web app standard 3–8K, agenti AI 1–4K, automazioni workflow custom da 800€. Prenota una call gratuita per un preventivo su misura.",
+    q: "Quanto tempo serve per partire?",
+    a: "Dalla prima call alla messa in produzione: tra le 3 e le 5 settimane per un agente AI singolo o un'automazione lineare. Per progetti più complessi o web app complete, si arriva alle 8-10 settimane. La tempistica precisa te la confermiamo dopo il brief iniziale, in modo realistico.",
   },
   {
-    q: "Lavorate con startup e PMI?",
-    a: "Siamo specializzati in PMI italiane. Lavoriamo con clienti reali — ristorazione, sport, beauty, immobiliare, servizi.",
+    q: "Quanto costa un progetto?",
+    a: "Dipende dalla complessità e dal livello di integrazione richiesto. La forchetta tipica per un agente AI custom va dai 2.500 ai 8.000 euro, più una piccola fee mensile per coprire infrastruttura e manutenzione. Per le web app si parte da 3.000 euro. Dopo la prima call ricevi un preventivo scritto e dettagliato.",
   },
   {
-    q: "Vi integrate col mio CRM o gestionale?",
-    a: "Sì. Connettiamo HubSpot, Salesforce, Zoho, gestionali custom via API o automazioni Make/n8n/Zapier.",
+    q: "Chi possiede il codice, i dati e i clienti?",
+    a: "Sono tutti tuoi. Il codice viene consegnato e documentato, i dati restano sui tuoi sistemi o sul tuo cloud, i clienti non li tocchiamo mai direttamente. Quando finiamo il progetto, sei libero di farlo gestire anche a un altro fornitore: tutto è scritto e organizzato per essere ripreso da chiunque.",
   },
   {
-    q: "Quanto tempo dal preventivo al deploy?",
-    a: "Web app: 2–4 settimane. Agente AI WhatsApp: 1–2 settimane. Automazioni workflow: 3–7 giorni.",
+    q: "Cosa succede se l'agente sbaglia una risposta?",
+    a: "Per tutte le azioni importanti — invio di preventivi, conferma di appuntamenti, pubblicazione di risposte a recensioni — c'è sempre un passaggio di approvazione umana. L'agente prepara la risposta, tu confermi prima dell'invio. Non ci saranno sorprese sul gruppo WhatsApp aziendale.",
   },
   {
-    q: "Restate dopo la consegna?",
-    a: "Sì. Monitoraggio, aggiornamenti, miglioramenti continui. È una relazione, non una fattura una tantum.",
+    q: "Funziona con i miei sistemi esistenti?",
+    a: "Sì, è il nostro lavoro principale. Integriamo gli agenti con HubSpot, Pipedrive, Notion, gestionali italiani custom, fogli Google, ERP aziendali. Se il sistema ha un'API o un foglio condiviso, riusciamo a collegarlo. Se è un sistema chiuso, troviamo una via alternativa.",
+  },
+  {
+    q: "Cosa succede dopo il go-live?",
+    a: "Restiamo a tuo fianco. C'è una fee mensile di manutenzione che copre il monitoraggio dei numeri, i piccoli aggiustamenti necessari, le ottimizzazioni periodiche. Quando un agente smette di funzionare bene è perché qualcosa è cambiato nel tuo business o nei tuoi processi: in quel caso lo riallineiamo insieme.",
   },
 ];
 
 export default function FAQ() {
   return (
-    <section className="py-24 border-t border-border relative z-10">
-      <div className="max-w-3xl mx-auto px-6">
-        <h2 className="text-2xl md:text-3xl font-heading text-white mb-12 text-center">
-          Domande <span className="text-gradient">frequenti</span>.
-        </h2>
-        <div className="space-y-3">
-          {faqs.map((f, i) => (
-            <details
-              key={i}
-              className="group bg-surface/70 border border-white/5 rounded-lg open:border-lime/20 transition-colors"
-            >
-              <summary className="flex justify-between items-center gap-4 font-medium cursor-pointer list-none p-5 text-text group-hover:text-white transition-colors">
-                <span>{f.q}</span>
-                <ChevronDown className="size-4 shrink-0 transition-transform group-open:rotate-180" />
+    <section className="border-b border-border py-24 md:py-32">
+      <div className="container-x">
+        <div className="mx-auto mb-14 max-w-2xl text-center md:mb-16">
+          <h2 className="font-heading text-3xl font-semibold leading-tight text-text md:text-5xl">
+            Le risposte alle domande che ci fanno <span className="text-accent">prima</span> di
+            firmare.
+          </h2>
+        </div>
+
+        <div className="mx-auto max-w-3xl divide-y divide-border border-y border-border">
+          {FAQS.map((f) => (
+            <details key={f.q} className="group py-5">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4">
+                <h3 className="font-heading text-lg font-semibold text-text md:text-xl">{f.q}</h3>
+                <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border border-border text-lg leading-none text-text-dim group-open:border-lime/50 group-open:text-lime">
+                  <span className="group-open:hidden">+</span>
+                  <span className="hidden group-open:inline">−</span>
+                </span>
               </summary>
-              <div className="text-text-dim text-sm px-5 pb-5 leading-relaxed">{f.a}</div>
+              <p className="mt-4 max-w-2xl text-sm leading-relaxed text-text-dim md:text-base">
+                {f.a}
+              </p>
             </details>
           ))}
         </div>
