@@ -3,7 +3,7 @@ import { site } from "@/lib/site";
 
 const NAV = [
   { label: "Servizi", href: "#servizi" },
-  { label: "Storia", href: "#storia" },
+  { label: "Chi siamo", href: "#chi-siamo" },
   { label: "Contatti", href: "#contatti" },
 ];
 
@@ -13,10 +13,10 @@ export default function Footer() {
   return (
     <footer className="relative border-t border-border bg-bg">
       {/* Chi siamo — Michele */}
-      <div id="storia" className="border-b border-border">
+      <div id="chi-siamo" className="scroll-mt-20 border-b border-border">
         <div className="container-x py-20">
           <div className="mx-auto max-w-3xl">
-            <p className="eyebrow mb-5">Dietro Semplifica AI</p>
+            <p className="eyebrow mb-5">Chi siamo</p>
             <h2 className="font-heading text-3xl font-bold leading-tight text-text md:text-4xl">
               <span className="text-gradient">Michele Ricco</span>, fondatore.
             </h2>

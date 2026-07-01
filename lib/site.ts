@@ -18,6 +18,6 @@ export const site = {
 /** Navigazione one-page. */
 export const navLinks = [
   { label: "Servizi", href: "#servizi" },
-  { label: "Storia", href: "#storia" },
+  { label: "Chi siamo", href: "#chi-siamo" },
   { label: "Contatti", href: "#contatti" },
 ];

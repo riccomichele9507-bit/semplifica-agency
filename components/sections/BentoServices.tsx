@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Bot, Workflow, Smartphone, ArrowRight } from "lucide-react";
+import { Bot, Workflow, Smartphone, Cpu, ArrowRight } from "lucide-react";
 
 /** Bento grid dei servizi (stile Vercel). AI Agents = card grande (prima
  *  immagine, con le cube), poi Workflow e Semplifica Studio. Palette verde. */
@@ -80,50 +80,64 @@ export default function BentoServices() {
                 <h3 className="font-heading text-xl font-bold tracking-tight text-text">Workflow</h3>
               </div>
               <p className="mb-4 text-sm leading-relaxed text-text-dim">
-                Make, n8n, Zapier. Esempio reale: il Review Agent che gestisce le recensioni
-                Google + Trustpilot.
+                Automatizziamo i processi ripetitivi che ti rubano ore. I dati si spostano
+                da soli tra i tuoi strumenti, le email partono al momento giusto, i report
+                sono pronti ogni mese. Tu ci pensi una volta, poi gira in automatico.
               </p>
-              <div className="flex flex-wrap items-center gap-1.5 text-[11px] text-text-dim/80" style={{ fontFamily: "var(--font-mono)" }}>
-                <span className="rounded border border-white/10 bg-bg px-2 py-0.5">n8n</span>
-                <span className="rounded border border-white/10 bg-bg px-2 py-0.5">Make</span>
-                <span className="rounded border border-white/10 bg-bg px-2 py-0.5">Zapier</span>
-              </div>
-              <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-lime/80 transition-colors group-hover:text-lime">
-                Vedi il caso reale <ArrowRight className="size-3" />
+              <span className="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold text-lime/80 transition-colors group-hover:text-lime">
+                Scopri come funziona <ArrowRight className="size-3" />
               </span>
             </div>
           </Link>
 
-          {/* Semplifica Studio (Web App) */}
-          <Link
-            href="/web-apps"
-            className="group relative overflow-hidden rounded-2xl border border-border bg-surface/60 p-7 transition-colors duration-300 hover:border-lime/30 md:p-8"
-          >
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(74,222,128,0.06),transparent_55%)]" />
-            <div className="relative z-10">
-              <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-lime">
-                Semplifica Studio
-              </p>
-              <div className="mb-4 flex items-center gap-3">
-                <div className="rounded-lg border border-lime/15 bg-lime/5 p-2 text-lime">
-                  <Smartphone className="size-5" />
+          {/* Web App (Semplifica Studio) + Custom AI: riga di 2 */}
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+            <Link
+              href="/web-apps"
+              className="group relative overflow-hidden rounded-2xl border border-border bg-surface/60 p-7 transition-colors duration-300 hover:border-lime/30"
+            >
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(74,222,128,0.06),transparent_55%)]" />
+              <div className="relative z-10">
+                <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-lime">
+                  Semplifica Studio
+                </p>
+                <div className="mb-4 flex items-center gap-3">
+                  <div className="rounded-lg border border-lime/15 bg-lime/5 p-2 text-lime">
+                    <Smartphone className="size-5" />
+                  </div>
+                  <h3 className="font-heading text-lg font-bold tracking-tight text-text">Web App</h3>
                 </div>
-                <h3 className="font-heading text-xl font-bold tracking-tight text-text">Web App</h3>
+                <p className="mb-4 text-xs leading-relaxed text-text-dim">
+                  Web app di ordinazione e prenotazione su misura. Un sushi di Trani ha smesso
+                  di pagare il <span className="text-lime">35%</span> di commissioni a Glovo.
+                </p>
+                <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-lime/80 transition-colors group-hover:text-lime">
+                  Vedi il caso reale <ArrowRight className="size-3" />
+                </span>
               </div>
-              <p className="mb-4 text-sm leading-relaxed text-text-dim">
-                Web app di ordinazione e prenotazione su misura. Un sushi di Trani ha smesso
-                di pagare il <span className="text-lime">35%</span> di commissioni a Glovo.
-              </p>
-              <div className="flex flex-wrap items-center gap-1.5 text-[11px] text-text-dim/80" style={{ fontFamily: "var(--font-mono)" }}>
-                <span className="rounded border border-white/10 bg-bg px-2 py-0.5">Ordering</span>
-                <span className="rounded border border-white/10 bg-bg px-2 py-0.5">Prenotazioni</span>
-                <span className="rounded border border-white/10 bg-bg px-2 py-0.5">Dashboard</span>
+            </Link>
+
+            <Link
+              href="#contatti"
+              className="group relative overflow-hidden rounded-2xl border border-border bg-surface/60 p-7 transition-colors duration-300 hover:border-lime/30"
+            >
+              <div className="relative z-10">
+                <div className="mb-4 flex items-center gap-3">
+                  <div className="rounded-lg border border-white/10 bg-white/5 p-2 text-lime">
+                    <Cpu className="size-5" />
+                  </div>
+                  <h3 className="font-heading text-lg font-bold tracking-tight text-text">Custom AI</h3>
+                </div>
+                <p className="mb-4 text-xs leading-relaxed text-text-dim">
+                  Modelli predittivi, OCR, agenti su misura per la tua logica di business.
+                  Quando la soluzione pronta non basta, la costruiamo da zero.
+                </p>
+                <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-lime/80 transition-colors group-hover:text-lime">
+                  Discutiamone <ArrowRight className="size-3" />
+                </span>
               </div>
-              <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-lime/80 transition-colors group-hover:text-lime">
-                Vedi il caso reale <ArrowRight className="size-3" />
-              </span>
-            </div>
-          </Link>
+            </Link>
+          </div>
         </div>
       </div>
     </section>

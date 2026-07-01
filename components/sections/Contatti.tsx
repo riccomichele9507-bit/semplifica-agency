@@ -76,7 +76,6 @@ export default function Contatti() {
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-text-dim md:text-lg">
               Prenota una consulenza gratuita, oppure compila il form qui sotto.
-              Rispondiamo entro 48 ore, sempre Michele in persona.
             </p>
 
             <div className="mt-8 flex justify-center">

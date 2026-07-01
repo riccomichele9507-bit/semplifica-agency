@@ -148,6 +148,39 @@
 }
 
 /* ============================================
+   CTA "Inizia un progetto" — bordo glow rotante (come Vercel)
+   ============================================ */
+@keyframes conic-rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+.btn-glow-border {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  padding: 1px;
+  transition: transform 0.1s;
+}
+.btn-glow-border:active { transform: scale(0.98); }
+.btn-glow-border::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, transparent 0deg, #4ADE80 90deg, #3DBE6C 180deg, transparent 270deg);
+  animation: conic-rotate 3s linear infinite;
+}
+@media (max-width: 768px), (prefers-reduced-motion: reduce) {
+  .btn-glow-border::before { animation: none; background: linear-gradient(135deg, #4ADE80, #3DBE6C); }
+}
+
+.btn-content-slide { position: relative; overflow: hidden; display: block; height: 1.25em; }
+.btn-text-original, .btn-text-hover { display: block; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+.btn-text-hover { position: absolute; top: 0; left: 0; width: 100%; transform: translateY(120%); }
+.group:hover .btn-text-original { transform: translateY(-120%); }
+.group:hover .btn-text-hover { transform: translateY(0); }
+
+/* ============================================
    PROCESS PANELS — micro-animazioni (SOLO qui)
    ============================================ */
 @keyframes pp-typing {
