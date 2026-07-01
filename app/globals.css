@@ -1,11 +1,12 @@
 @import "tailwindcss";
-@import "@fontsource-variable/playfair-display";
-@import "@fontsource-variable/manrope";
+@import "@fontsource-variable/newsreader";
+@import "@fontsource-variable/syne";
+@import "@fontsource-variable/dm-sans";
+@import "@fontsource-variable/jetbrains-mono";
 
 /* ============================================
-   SEMPLIFICA AI — Design System v2
-   Martes-style · flat · zero motion
-   Titoli Playfair Display · body Manrope
+   SEMPLIFICA AI — Design System v3
+   Font del sito Vercel · palette verde #4ADE80
    ============================================ */
 
 @theme {
@@ -21,12 +22,12 @@
   /* Accent (verde Semplifica) */
   --color-lime: #4ADE80;
   --color-lime-dim: #3DBE6C;
-  --color-amber: #4ADE80; /* alias: nessun secondo accent in v2 */
+  --color-amber: #4ADE80; /* alias: unico accent = verde */
 
-  /* Fonts */
-  --font-heading: "Playfair Display Variable", Georgia, serif;
-  --font-body: "Manrope Variable", system-ui, sans-serif;
-  --font-mono: "Manrope Variable", system-ui, sans-serif;
+  /* Fonts (come sul sito Vercel) */
+  --font-heading: "Newsreader Variable", "Syne Variable", Georgia, serif;
+  --font-body: "DM Sans Variable", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, monospace;
 }
 
 /* ---- Base layer ---- */
@@ -44,21 +45,18 @@
     background-color: var(--color-bg);
     color: var(--color-text);
     font-family: var(--font-body);
-    line-height: 1.65;
+    line-height: 1.6;
     overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    font-weight: 600;
-    letter-spacing: -0.015em;
-    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.12;
   }
 
-  ::selection {
-    background-color: var(--color-lime);
-    color: var(--color-bg);
-  }
+  ::selection { background-color: var(--color-lime); color: var(--color-bg); }
 
   ::-webkit-scrollbar { width: 8px; }
   ::-webkit-scrollbar-track { background: var(--color-bg); }
@@ -74,12 +72,35 @@
   padding-inline: clamp(1.25rem, 5vw, 2.5rem);
 }
 
-/* Highlight verde dentro i titoli */
-@utility text-accent {
-  color: var(--color-lime);
+@utility text-accent { color: var(--color-lime); }
+
+@utility text-gradient {
+  background: linear-gradient(90deg, var(--color-lime), var(--color-lime-dim));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-/* Eyebrow uppercase verde */
+@utility radial-lime {
+  background: radial-gradient(60% 50% at 50% 0%, rgba(74, 222, 128, 0.1), transparent 70%);
+}
+
+@utility hero-bg {
+  background:
+    radial-gradient(50% 45% at 18% 22%, rgba(74, 222, 128, 0.12), transparent 70%),
+    radial-gradient(45% 40% at 85% 30%, rgba(74, 222, 128, 0.08), transparent 70%),
+    radial-gradient(60% 50% at 50% 100%, rgba(74, 222, 128, 0.06), transparent 70%);
+}
+
+@utility grid-overlay {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(70% 70% at 50% 40%, #000 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(70% 70% at 50% 40%, #000 30%, transparent 80%);
+}
+
 @utility eyebrow {
   display: inline-block;
   font-family: var(--font-body);
@@ -90,7 +111,6 @@
   color: var(--color-lime);
 }
 
-/* Tag con bordo verde */
 @utility tag-green {
   display: inline-flex;
   align-items: center;
@@ -103,53 +123,46 @@
   border-radius: 5px;
 }
 
-/* Bottone primario: bordo verde, hover pieno */
-@utility btn-green {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  border: 1px solid var(--color-lime);
-  color: var(--color-lime);
-  background: transparent;
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 0.9375rem;
-  padding: 0.85rem 1.6rem;
-  border-radius: 6px;
-  transition: background-color 0.2s ease, color 0.2s ease;
+/* Flip card (sezione benefici, ispirazione 21st.dev) */
+@utility flip-card {
+  perspective: 1200px;
 }
-@utility btn-green-hover {
-  background: var(--color-lime);
-  color: var(--color-bg);
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.flip-card:hover .flip-card-inner,
+.flip-card:focus-within .flip-card-inner { transform: rotateY(180deg); }
+.flip-card-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.flip-card-back { transform: rotateY(180deg); }
+@media (prefers-reduced-motion: reduce) {
+  .flip-card-inner { transition: none; }
 }
 
 /* ============================================
    PROCESS PANELS — micro-animazioni (SOLO qui)
-   Tutto il resto del sito resta statico.
    ============================================ */
 @keyframes pp-typing {
   0%, 60%, 100% { opacity: 0.25; transform: translateY(0); }
   30% { opacity: 1; transform: translateY(-2px); }
 }
-@keyframes pp-blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-@keyframes pp-bar {
-  0% { width: 22%; }
-  50% { width: 86%; }
-  100% { width: 22%; }
-}
+@keyframes pp-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+@keyframes pp-bar { 0% { width: 22%; } 50% { width: 86%; } 100% { width: 22%; } }
 @keyframes pp-flow {
   0% { offset-distance: 0%; opacity: 0; }
   12% { opacity: 1; }
   88% { opacity: 1; }
   100% { offset-distance: 100%; opacity: 0; }
 }
-@keyframes pp-pulse {
-  0%, 100% { opacity: 0.35; }
-  50% { opacity: 1; }
-}
+@keyframes pp-pulse { 0%, 100% { opacity: 0.35; } 50% { opacity: 1; } }
 @keyframes pp-spin { to { transform: rotate(360deg); } }
 
 [data-pp="typing"] { animation: pp-typing 1.4s infinite ease-in-out; }
