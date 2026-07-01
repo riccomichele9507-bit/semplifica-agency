@@ -75,9 +75,20 @@ export default function Contatti() {
               Parliamo del tuo <span className="text-accent">progetto</span>.
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-text-dim md:text-lg">
-              Compila il form qui sotto, oppure scrivici direttamente su WhatsApp se
-              preferisci. Rispondiamo entro 48 ore, sempre Michele in persona.
+              Prenota una consulenza gratuita, oppure compila il form qui sotto.
+              Rispondiamo entro 48 ore, sempre Michele in persona.
             </p>
+
+            <div className="mt-8 flex justify-center">
+              <a
+                href={site.cal}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-md bg-lime px-7 py-3.5 text-sm font-semibold text-bg transition-colors hover:bg-lime-dim"
+              >
+                Prenota una consulenza →
+              </a>
+            </div>
           </div>
 
           {status === "ok" ? (

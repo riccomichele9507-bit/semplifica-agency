@@ -3,10 +3,12 @@ export const site = {
   founder: "Michele Ricco",
   founderRole: "Aiutiamo gli imprenditori italiani a integrare l'AI nei loro processi",
   location: "Trani, Puglia",
-  email: "michelericco95@gmail.com",
+  email: "semplificaai@gmail.com",
   phone: "+39 346 248 2556",
   whatsapp: "https://wa.me/393462482556",
   linkedin: "https://www.linkedin.com/in/michelericco/",
+  /** Booking Cal.com — da collegare. */
+  cal: "https://cal.com/semplifica-ai",
   url: "https://semplifica.ai",
   tagline: "Soluzioni AI su misura per la tua azienda.",
   description:
@@ -16,7 +18,6 @@ export const site = {
 /** Navigazione one-page. */
 export const navLinks = [
   { label: "Servizi", href: "#servizi" },
-  { label: "Demo", href: "#demo" },
   { label: "Storia", href: "#storia" },
   { label: "Contatti", href: "#contatti" },
 ];

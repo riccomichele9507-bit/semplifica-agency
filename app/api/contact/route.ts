@@ -53,7 +53,7 @@ export async function POST(req: NextRequest) {
   try {
     const { error } = await resend.emails.send({
       from: "Semplifica AI <onboarding@resend.dev>",
-      to: "michelericco95@gmail.com",
+      to: "semplificaai@gmail.com",
       replyTo: cleanEmail,
       subject: `Nuovo messaggio da ${cleanNome}`,
       html: `

@@ -3,7 +3,6 @@ import { site } from "@/lib/site";
 
 const NAV = [
   { label: "Servizi", href: "#servizi" },
-  { label: "Demo", href: "#demo" },
   { label: "Storia", href: "#storia" },
   { label: "Contatti", href: "#contatti" },
 ];

@@ -13,11 +13,9 @@ export default function Hero() {
 
       <div className="container-x relative z-10 py-16 md:py-24">
         <div className="max-w-4xl">
-          <p className="eyebrow mb-6">AI Automation · Trani, Italia</p>
-
           <h1 className="font-heading text-4xl font-bold leading-[1.08] tracking-tight text-text sm:text-5xl md:text-6xl lg:text-[4.25rem]">
             L&apos;AI ti fa risparmiare{" "}
-            <span className="text-gradient">il tempo</span> che oggi butti in lavoro
+            <span className="text-gradient">il tempo</span> che oggi perdi in lavoro
             ripetitivo.
           </h1>
 

@@ -49,9 +49,7 @@ export default function ComeLavoriamo() {
             ogni fase.
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-text-dim md:text-lg">
-            Quattro fasi chiare, tempistiche definite in anticipo, aggiornamenti regolari via
-            WhatsApp. Niente PowerPoint di mille pagine, niente status meeting da un&apos;ora
-            che potevano essere un messaggio.
+            Quattro fasi chiare, tempistiche definite in anticipo.
           </p>
         </div>
 
