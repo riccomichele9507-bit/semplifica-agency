@@ -96,7 +96,7 @@ export default function BentoServices() {
 
             {/* Semplifica Studio */}
             <Link
-              href="#studio"
+              href="/studio"
               className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface/60 p-7 transition-colors duration-300 hover:border-lime/30"
             >
               <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(74,222,128,0.06),transparent_55%)]" />
