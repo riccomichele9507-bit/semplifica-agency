@@ -10,6 +10,7 @@ const CUBES = [
   { nome: "FILO", img: "/agents/filo-box.png" },
   { nome: "Voice", img: "/agents/voice-box.png" },
   { nome: "QuoteBot", img: "/agents/quotebot-box.png" },
+  { nome: "Alba", img: "/agents/alba-box.png" },
 ];
 
 export default function BentoServices() {
@@ -42,18 +43,20 @@ export default function BentoServices() {
                 <h3 className="font-heading text-xl font-bold tracking-tight text-text">AI Agents</h3>
               </div>
               <p className="mb-6 text-sm leading-relaxed text-text-dim">
-                Quattro agenti per testo, voce e processi.{" "}
+                Cinque agenti per testo, voce, processi e documenti.{" "}
                 <span className="text-text">ARIA</span> · <span className="text-text">FILO</span> ·{" "}
-                <span className="text-text">Voice</span> · <span className="text-text">QuoteBot</span>.
-                Lavorano per te 24/7.
+                <span className="text-text">Voice</span> · <span className="text-text">QuoteBot</span> ·{" "}
+                <span className="text-text">Alba</span>. Lavorano per te 24/7.
               </p>
 
-              {/* Cube dei 4 agenti */}
+              {/* Cube degli agenti */}
               <div className="grid flex-1 grid-cols-2 gap-3">
-                {CUBES.map((c) => (
+                {CUBES.map((c, i) => (
                   <div
                     key={c.nome}
-                    className="flex flex-col items-center justify-center rounded-xl border border-border bg-bg p-4"
+                    className={`flex flex-col items-center justify-center rounded-xl border border-border bg-bg p-4 ${
+                      i === CUBES.length - 1 && CUBES.length % 2 === 1 ? "col-span-2" : ""
+                    }`}
                   >
                     <Image src={c.img} alt={`${c.nome} icon`} width={120} height={120} className="h-20 w-20 object-cover" />
                     <span className="mt-2 text-xs font-semibold uppercase tracking-wider text-text-dim">{c.nome}</span>

@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import BackHomeButton from "@/components/BackHomeButton";
+import SicurezzaConformita from "@/components/sections/SicurezzaConformita";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -31,6 +32,7 @@ export default function RootLayout({
         <Navbar />
         <BackHomeButton />
         <main>{children}</main>
+        <SicurezzaConformita />
         <Footer />
         <WhatsAppButton />
       </body>

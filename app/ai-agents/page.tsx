@@ -10,7 +10,7 @@ import AgentCTA from "@/components/sections/agents/AgentCTA";
 export const metadata: Metadata = {
   title: "AI Agents — Agenti AI per WhatsApp, telefono e processi",
   description:
-    "Quattro agenti pronti: ARIA riattiva lead dormienti, FILO gestisce prenotazioni, Voice risponde al telefono, QuoteBot trasforma le email in preventivi.",
+    "Cinque agenti pronti: ARIA riattiva lead dormienti, FILO gestisce prenotazioni, Voice risponde al telefono, QuoteBot trasforma le email in preventivi, Alba estrae dati dai documenti.",
 };
 
 type Agent = {
@@ -56,6 +56,14 @@ const agents: Agent[] = [
     bullets: ["Estrazione richieste d'offerta", "Arricchimento dati P.IVA da Camera di Commercio", "Preventivo PDF + email risposta in italiano"],
     iconLucide: FileText,
   },
+  {
+    name: "Alba",
+    href: "/alba",
+    tag: "Documenti e dati",
+    desc: "Legge contratti, fatture, ricette e archivi. Estrae i campi che contano, li rende cercabili per contenuto e si integra col gestionale. Niente più data-entry a mano.",
+    bullets: ["Estrazione dati da PDF, foto e scansioni", "Ricerca per contenuto, non per nome file", "Validazione umana + conforme GDPR"],
+    iconImage: "/agents/alba-box.png",
+  },
 ];
 
 const steps = [
@@ -83,8 +91,8 @@ export default function AiAgentsPage() {
             </h1>
 
             <p className="mt-7 max-w-2xl text-base leading-relaxed text-text-dim md:text-lg">
-              Quattro agenti pronti: WhatsApp per lead e prenotazioni, voce per il telefono, email
-              per i preventivi B2B. Niente turni, niente ferie, niente chiamate perse.
+              Cinque agenti pronti: WhatsApp per lead e prenotazioni, voce per il telefono, email
+              per i preventivi B2B, documenti letti ed estratti. Niente turni, niente ferie.
             </p>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row md:mt-10">
@@ -104,7 +112,7 @@ export default function AiAgentsPage() {
         <div className="container-x">
           <Reveal className="mb-12 max-w-2xl md:mb-16">
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-amber">I nostri agenti</p>
-            <h2 className="font-heading text-3xl font-bold md:text-5xl">Quattro agenti. <span className="text-gradient">Quattro risultati concreti.</span></h2>
+            <h2 className="font-heading text-3xl font-bold md:text-5xl">Cinque agenti. <span className="text-gradient">Cinque risultati concreti.</span></h2>
           </Reveal>
 
           <Reveal stagger className="grid gap-5 md:grid-cols-2">

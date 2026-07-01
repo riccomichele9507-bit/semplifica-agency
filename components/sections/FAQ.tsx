@@ -7,7 +7,7 @@ const FAQS = [
   },
   {
     q: "Quanto costa un progetto?",
-    a: "Dipende dalla complessità e dal livello di integrazione richiesto. La forchetta tipica per un agente AI custom va dai 2.500 ai 8.000 euro, più una piccola fee mensile per coprire infrastruttura e manutenzione. Per le web app si parte da 3.000 euro. Dopo la prima call ricevi un preventivo scritto e dettagliato.",
+    a: "Dipende dalla complessità e dal livello di integrazione richiesto. Dopo la prima call ricevi un preventivo scritto e dettagliato.",
   },
   {
     q: "Chi possiede il codice, i dati e i clienti?",

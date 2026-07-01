@@ -9,6 +9,13 @@ const NAV = [
 
 const STACK = ["Claude API", "OpenAI", "n8n / Make", "Supabase"];
 
+const LEGALE = [
+  { label: "Privacy", href: "/privacy" },
+  { label: "Cookie Policy", href: "/cookie-policy" },
+  { label: "Note legali", href: "/note-legali" },
+  { label: "Termini", href: "/termini" },
+];
+
 export default function Footer() {
   return (
     <footer className="relative border-t border-border bg-bg">
@@ -47,15 +54,15 @@ export default function Footer() {
 
       {/* Colonne footer */}
       <div className="container-x py-14">
-        <div className="grid grid-cols-2 gap-10 md:grid-cols-4">
-          <div className="col-span-2 md:col-span-1">
+        <div className="grid grid-cols-2 gap-10 md:grid-cols-3 lg:grid-cols-5">
+          <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <Link href="/" className="flex items-center gap-2">
               <span className="font-heading text-lg font-bold text-text">Semplifica AI</span>
               <span className="h-1.5 w-1.5 rounded-full bg-lime" />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-text-dim">
-              Aiutiamo gli imprenditori italiani a recuperare il tempo che perdono in lavoro
-              ripetitivo.
+              Agenzia AI che libera le aziende dal lavoro manuale. Soluzioni su misura, in
+              produzione in giorni.
             </p>
           </div>
 
@@ -75,6 +82,17 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {STACK.map((s) => (
                 <li key={s} className="text-sm text-text-dim">{s}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-text-dim">Legale</p>
+            <ul className="space-y-2.5">
+              {LEGALE.map((l) => (
+                <li key={l.label}>
+                  <Link href={l.href} className="text-sm text-text-dim transition-colors hover:text-lime">{l.label}</Link>
+                </li>
               ))}
             </ul>
           </div>
