@@ -7,8 +7,8 @@ export const site = {
   phone: "+39 346 248 2556",
   whatsapp: "https://wa.me/393462482556",
   linkedin: "https://www.linkedin.com/in/michelericco/",
-  /** Booking Cal.com — da collegare. */
-  cal: "https://cal.com/semplifica-ai",
+  /** Booking Cal.com. */
+  cal: "https://cal.com/michele-ricco-gszp9v/consulenza-gratuita",
   url: "https://semplifica.ai",
   tagline: "Soluzioni AI su misura per la tua azienda.",
   description:
