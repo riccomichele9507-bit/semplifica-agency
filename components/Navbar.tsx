@@ -10,11 +10,17 @@ export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-[100] border-b border-border bg-bg/85 backdrop-blur-xl">
       <div className="container-x flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2.5" aria-label="Semplifica AI — home">
+          <svg width="26" height="26" viewBox="0 0 64 64" fill="none" aria-hidden="true" className="flex-none">
+            <path d="M15 20 L40 32" stroke="#4D4D4A" strokeWidth="4" strokeLinecap="round" />
+            <path d="M15 32 L40 32" stroke="#4D4D4A" strokeWidth="4" strokeLinecap="round" />
+            <path d="M15 44 L40 32" stroke="#4D4D4A" strokeWidth="4" strokeLinecap="round" />
+            <path d="M40 32 H50" stroke="#4ADE80" strokeWidth="4" strokeLinecap="round" />
+            <circle cx="52.5" cy="32" r="3.2" fill="#4ADE80" />
+          </svg>
           <span className="font-heading text-lg font-bold tracking-tight text-text">
             Semplifica AI
           </span>
-          <span className="h-1.5 w-1.5 rounded-full bg-lime" />
         </Link>
 
         {/* Desktop nav */}
