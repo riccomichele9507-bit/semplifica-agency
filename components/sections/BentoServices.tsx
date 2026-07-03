@@ -131,8 +131,8 @@ export default function BentoServices() {
                   <h3 className="font-heading text-lg font-bold tracking-tight text-text">Web App</h3>
                 </div>
                 <p className="mb-4 flex-1 text-xs leading-relaxed text-text-dim">
-                  Web app di ordinazione e prenotazione su misura. Un sushi di Trani ha smesso
-                  di pagare il <span className="text-lime">35%</span> di commissioni a Glovo.
+                  Web app di ordinazione e prenotazione su misura, sul tuo dominio. I clienti
+                  ordinano da te, tu paghi zero commissioni alle piattaforme.
                 </p>
                 <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-lime/80 transition-colors group-hover:text-lime">
                   Vedi la pagina <ArrowRight className="size-3" />

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   MessageCircle,
@@ -18,7 +19,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Web App di ordinazione e prenotazione — Semplifica Studio",
   description:
-    "La tua web app di ordini e prenotazioni, sul tuo dominio, senza commissioni alle piattaforme. Un sushi di Trani ha smesso di pagare il 35% a Glovo. Online in 2 settimane.",
+    "La tua web app di ordini e prenotazioni, sul tuo dominio, senza commissioni alle piattaforme. Un sushi di Bari ha smesso di pagare il 35% a Glovo. Online in 2 settimane.",
 };
 
 const INCLUDE = [
@@ -77,7 +78,7 @@ export default function WebAppPage() {
             <Reveal>
               <p className="eyebrow mb-4">Caso reale</p>
               <h2 className="max-w-3xl font-heading text-3xl font-bold leading-tight text-text md:text-5xl">
-                Un sushi di Trani ha smesso di pagare il <span className="text-gradient">35%</span> a
+                Un sushi di Bari ha smesso di pagare il <span className="text-gradient">35%</span> a
                 Glovo.
               </h2>
             </Reveal>
@@ -104,6 +105,27 @@ export default function WebAppPage() {
                 </div>
               </Reveal>
             </div>
+
+            {/* Screenshot della web app reale */}
+            <Reveal className="mt-12">
+              <div className="overflow-hidden rounded-2xl border border-border bg-surface">
+                <Image
+                  src="/casi/special-sushi-poke.png"
+                  alt="Web app Special Sushi Poke — Bari"
+                  width={1280}
+                  height={900}
+                  sizes="(max-width:1024px) 100vw, 1000px"
+                  className="h-auto w-full"
+                />
+              </div>
+              <p className="mt-4 text-center text-sm text-text-dim">
+                La web app di{" "}
+                <a href="https://www.specialsushipokebari.com" target="_blank" rel="noopener noreferrer" className="text-lime hover:underline">
+                  Special Sushi Poke
+                </a>
+                , in produzione a Bari.
+              </p>
+            </Reveal>
           </div>
         </div>
       </section>

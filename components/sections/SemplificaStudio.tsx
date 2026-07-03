@@ -18,16 +18,27 @@ import {
 /** Contenuto di "Semplifica Studio" — web-factory (siti, web app, refactoring)
  *  + GEO & SEO. Usato nella pagina /studio. Nessun movimento. */
 
+type FeatureLink = { label: string; href: string };
+
 type Feature = {
   Icon: typeof Layout;
   titolo: string;
   desc: string;
   href?: string;
+  links?: FeatureLink[];
 };
 
 const STUDIO: Feature[] = [
   { Icon: Layout, titolo: "Siti e landing", desc: "Veloci, accessibili, fatti per convertire. Dalla prima impressione alla call.", href: "/web-apps" },
-  { Icon: LayoutDashboard, titolo: "Web app su misura", desc: "Dashboard, portali, strumenti interni. Costruiti sul tuo flusso, non su un template.", href: "/web-apps" },
+  {
+    Icon: LayoutDashboard,
+    titolo: "Web app su misura",
+    desc: "Ordinazione, prenotazione, dashboard e portali. Costruiti sul tuo flusso, non su un template.",
+    links: [
+      { label: "Vedi gli esempi", href: "/web-apps" },
+      { label: "Vedi il caso studio", href: "/web-app" },
+    ],
+  },
   { Icon: Wrench, titolo: "Refactoring vibe-coded", desc: "Sistemiamo prototipi AI-generated e li portiamo in produzione, senza riscrivere tutto." },
   { Icon: Accessibility, titolo: "Accessibilità", desc: "Conforme WCAG: il web per tutti, davvero. Una scelta di design, non una spunta." },
   { Icon: Gauge, titolo: "Performance & SEO", desc: "Core Web Vitals curati. Veloce per gli utenti, leggibile per i motori." },
@@ -43,30 +54,55 @@ const GEO: Feature[] = [
   { Icon: Award, titolo: "Autorità", desc: "Presenza, recensioni e segnali di fiducia che pesano sia per l'AI sia per i motori." },
 ];
 
-function FeatureCard({ f }: { f: Feature }) {
-  const inner = (
+function FeatureBody({ f }: { f: Feature }) {
+  return (
     <>
       <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-lime/20 bg-lime/[0.08] text-lime">
         <f.Icon className="h-5 w-5" />
       </span>
       <h4 className="mt-4 font-heading text-base font-bold text-text">{f.titolo}</h4>
       <p className="mt-2 text-sm leading-relaxed text-text-dim">{f.desc}</p>
-      {f.href && (
-        <span className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-lime/80 transition-colors group-hover:text-lime">
-          Vedi gli esempi <ArrowRight className="h-3.5 w-3.5" />
-        </span>
-      )}
     </>
   );
+}
+
+function FeatureCard({ f }: { f: Feature }) {
+  // Card con più link: non è un Link che avvolge tutto, ma ha CTA separate
+  if (f.links) {
+    return (
+      <div className="flex flex-col rounded-xl border border-border bg-surface p-6 transition-colors hover:border-lime/40">
+        <FeatureBody f={f} />
+        <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2">
+          {f.links.map((l) => (
+            <Link
+              key={l.label}
+              href={l.href}
+              className="group inline-flex items-center gap-1.5 text-xs font-semibold text-lime/80 transition-colors hover:text-lime"
+            >
+              {l.label} <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   if (f.href) {
     return (
       <Link href={f.href} className="group flex flex-col rounded-xl border border-border bg-surface p-6 transition-colors hover:border-lime/40">
-        {inner}
+        <FeatureBody f={f} />
+        <span className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-lime/80 transition-colors group-hover:text-lime">
+          Vedi gli esempi <ArrowRight className="h-3.5 w-3.5" />
+        </span>
       </Link>
     );
   }
-  return <div className="rounded-xl border border-border bg-surface p-6 transition-colors hover:border-lime/30">{inner}</div>;
+
+  return (
+    <div className="rounded-xl border border-border bg-surface p-6 transition-colors hover:border-lime/30">
+      <FeatureBody f={f} />
+    </div>
+  );
 }
 
 function FeatureGrid({ items }: { items: Feature[] }) {
