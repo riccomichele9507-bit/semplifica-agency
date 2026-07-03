@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import {
   ArrowRight,
   MessageCircle,
@@ -19,7 +18,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Web App di ordinazione e prenotazione — Semplifica Studio",
   description:
-    "La tua web app di ordini e prenotazioni, sul tuo dominio, senza commissioni alle piattaforme. Un sushi di Bari ha smesso di pagare il 35% a Glovo. Online in 2 settimane.",
+    "La tua web app di ordini e prenotazioni, sul tuo dominio, senza commissioni alle piattaforme. Un sushi di Bari ha smesso di pagare le commissioni a Glovo. Online in 2 settimane.",
 };
 
 const INCLUDE = [
@@ -74,57 +73,32 @@ export default function WebAppPage() {
       {/* Caso reale sushi */}
       <section className="border-t border-border py-20 md:py-28">
         <div className="container-x">
-          <div className="mx-auto max-w-5xl">
+          <div className="mx-auto max-w-3xl">
             <Reveal>
               <p className="eyebrow mb-4">Caso reale</p>
-              <h2 className="max-w-3xl font-heading text-3xl font-bold leading-tight text-text md:text-5xl">
-                Un sushi di Bari ha smesso di pagare il <span className="text-gradient">35%</span> a
-                Glovo.
+              <h2 className="font-heading text-3xl font-bold leading-tight text-text md:text-5xl">
+                Un sushi di Bari ha smesso di pagare le{" "}
+                <span className="text-gradient">commissioni</span> a Glovo.
               </h2>
-            </Reveal>
-
-            <div className="mt-10 grid grid-cols-1 gap-12 lg:grid-cols-5 lg:gap-16">
-              <Reveal className="lg:col-span-3">
-                <p className="text-base leading-relaxed text-text-dim md:text-lg">
-                  Ogni venerdì e sabato sera le piattaforme di delivery si prendevano un terzo
-                  del fatturato in commissioni. A fine mese, il margine si dimezzava.
-                </p>
-                <p className="mt-5 text-base leading-relaxed text-text-dim md:text-lg">
-                  In due settimane abbiamo costruito la web app di ordinazione del locale:
-                  menu, carrello, conferma ordine, notifica al cuoco. I clienti ordinano
-                  direttamente dal sito del ristorante. Niente commissioni, niente
-                  intermediari.
-                </p>
-              </Reveal>
-              <Reveal delay={0.1} className="lg:col-span-2">
-                <div className="rounded-2xl border border-border bg-surface p-10 text-center">
-                  <p className="font-heading text-7xl font-bold leading-none text-gradient md:text-8xl">35%</p>
-                  <p className="mt-5 text-sm leading-relaxed text-text-dim">
-                    di commissioni recuperate su ogni ordine fuori dalle piattaforme.
-                  </p>
-                </div>
-              </Reveal>
-            </div>
-
-            {/* Screenshot della web app reale */}
-            <Reveal className="mt-12">
-              <div className="overflow-hidden rounded-2xl border border-border bg-surface">
-                <Image
-                  src="/casi/special-sushi-poke.png"
-                  alt="Web app Special Sushi Poke — Bari"
-                  width={1280}
-                  height={900}
-                  sizes="(max-width:1024px) 100vw, 1000px"
-                  className="h-auto w-full"
-                />
-              </div>
-              <p className="mt-4 text-center text-sm text-text-dim">
-                La web app di{" "}
-                <a href="https://www.specialsushipokebari.com" target="_blank" rel="noopener noreferrer" className="text-lime hover:underline">
-                  Special Sushi Poke
-                </a>
-                , in produzione a Bari.
+              <p className="mt-6 text-base leading-relaxed text-text-dim md:text-lg">
+                Ogni venerdì e sabato sera le piattaforme di delivery si prendevano una fetta
+                del fatturato in commissioni. A fine mese, il margine si assottigliava.
               </p>
+              <p className="mt-5 text-base leading-relaxed text-text-dim md:text-lg">
+                In due settimane abbiamo costruito la web app di ordinazione del locale: menu,
+                carrello, conferma ordine, notifica al cuoco. I clienti ordinano direttamente
+                dal sito del ristorante. Niente commissioni, niente intermediari.
+              </p>
+
+              <a
+                href="https://www.specialsushipokebari.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex items-center gap-2 rounded-md border border-lime px-6 py-3 text-sm font-semibold text-lime transition-colors hover:bg-lime hover:text-bg"
+              >
+                Vedi la web app live: specialsushipokebari.com
+                <ArrowRight className="h-4 w-4" />
+              </a>
             </Reveal>
           </div>
         </div>
