@@ -67,7 +67,7 @@ export default function WorkflowAutomationPage() {
           <Reveal className="mb-12 max-w-3xl md:mb-16">
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-amber">Caso reale · n8n</p>
             <h2 className="font-heading text-3xl font-bold leading-tight md:text-5xl">
-              Review Agent — gestione recensioni{" "}
+              Review Agent per la gestione recensioni{" "}
               <span className="text-gradient">Google + Trustpilot.</span>
             </h2>
             <p className="mt-5 text-base leading-relaxed text-text-dim md:text-lg">
@@ -92,7 +92,7 @@ export default function WorkflowAutomationPage() {
                 />
               </div>
               <p className="mt-4 text-center text-xs text-text-dim italic">
-                Workflow n8n in produzione — flusso completo dei nodi
+                Workflow n8n in produzione, flusso completo dei nodi
               </p>
             </div>
           </Reveal>

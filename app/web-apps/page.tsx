@@ -27,7 +27,7 @@ export default function WebAppsPage() {
                 Le web app che <span className="text-gradient">costruiamo.</span>
               </h1>
               <p className="mt-6 max-w-md text-base text-text-dim md:text-lg">
-                App mobile e web app su misura per le PMI — ristorazione, sport, beauty, mobilità,
+                App mobile e web app su misura per le PMI: ristorazione, sport, beauty, mobilità,
                 immobiliare. Design distintivo, niente template. Ecco una selezione, in più varianti di stile.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">

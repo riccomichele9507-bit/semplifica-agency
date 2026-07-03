@@ -30,7 +30,7 @@ export default function QuoteBotPage() {
         ]}
         soluzioni={[
           { text: "Estrazione automatica", desc: "Legge la mail e capisce subito se è una richiesta d'offerta. Estrae prodotti, quantità e contesto." },
-          { text: "Arricchimento dati", desc: "Trova P.IVA e indirizzo via Camera di Commercio (openapi.it) e web search (Tavily) — anche se non sono nell'email." },
+          { text: "Arricchimento dati", desc: "Trova P.IVA e indirizzo via Camera di Commercio (openapi.it) e web search (Tavily), anche se non sono nell'email." },
           { text: "Catalogo come fonte di verità", desc: "Pesca gli SKU dal catalogo CRM (Supabase). Niente codici inventati, prezzi sempre aggiornati." },
           { text: "PDF + email + pipeline pronti", desc: "Genera preventivo PDF, scrive l'email di risposta in italiano e aggiorna la pipeline del CRM. Tu approvi e invii." },
         ]}
@@ -41,7 +41,7 @@ export default function QuoteBotPage() {
         steps={[
           { title: "Legge la mail su Gmail", desc: "Monitora la casella ogni pochi minuti e capisce subito se l'email è una richiesta d'offerta." },
           { title: "Arricchisce i dati azienda", desc: "Estrae prodotti e quantità, poi trova P.IVA, indirizzo e contatti dell'azienda da Camera di Commercio e web." },
-          { title: "Genera preventivo + PDF", desc: "Pesca gli SKU dal catalogo, calcola prezzi e genera il preventivo in PDF — niente codici inventati." },
+          { title: "Genera preventivo + PDF", desc: "Pesca gli SKU dal catalogo, calcola prezzi e genera il preventivo in PDF, senza codici inventati." },
           { title: "Tu approvi e invii", desc: "QuoteBot scrive anche l'email di risposta in italiano e aggiorna la pipeline. Tu rivedi e invii con un clic." },
         ]}
       />
@@ -55,7 +55,7 @@ export default function QuoteBotPage() {
             </h2>
             <p className="mt-6 text-base leading-relaxed text-text-dim md:text-lg">
               Il commerciale non scrive più nulla da zero: rivede, approva, invia. E il CRM si
-              popola da solo — puoi anche chiedergli, in italiano, &quot;dammi i dati di Bellaveduta&quot;.
+              popola da solo. Puoi anche chiedergli, in italiano, &quot;dammi i dati di Bellaveduta&quot;.
             </p>
             <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
               {[

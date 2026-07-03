@@ -15,7 +15,7 @@ const FAQS = [
   },
   {
     q: "Cosa succede se l'agente sbaglia una risposta?",
-    a: "Per tutte le azioni importanti — invio di preventivi, conferma di appuntamenti, pubblicazione di risposte a recensioni — c'è sempre un passaggio di approvazione umana. L'agente prepara la risposta, tu confermi prima dell'invio. Non ci saranno sorprese sul gruppo WhatsApp aziendale.",
+    a: "Sulle azioni che contano, come preventivi, appuntamenti e risposte alle recensioni, resta sempre un tuo passaggio di controllo. L'agente prepara la risposta, tu la leggi e la invii. Così non ci sono sorprese sul gruppo WhatsApp dell'azienda.",
   },
   {
     q: "Funziona con i miei sistemi esistenti?",

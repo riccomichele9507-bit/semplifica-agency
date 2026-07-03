@@ -17,7 +17,7 @@ export default function AriaPage() {
       <AgentHero
         badge="Agente AI • WhatsApp"
         headline="ARIA: l'agente AI WhatsApp che riattiva i tuoi lead dormienti."
-        subheadline="ARIA si collega al tuo database, analizza ogni contatto e invia messaggi WhatsApp personalizzati. Gestisce le conversazioni in autonomia, risponde alle domande e prenota appuntamenti — 24/7, senza intervento umano."
+        subheadline="ARIA si collega al tuo database, analizza ogni contatto e invia messaggi WhatsApp personalizzati. Gestisce le conversazioni in autonomia, risponde alle domande e prenota appuntamenti, 24/7, senza intervento umano."
       />
 
       <AgentProblema

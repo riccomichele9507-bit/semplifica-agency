@@ -21,11 +21,11 @@ const blocks: Block[] = [
       { from: "user", text: "Alle 20:00 perfetto", time: "20:15" },
       { from: "bot", text: "Ottimo! Solo il tuo nome per la prenotazione 🙏", time: "20:15" },
       { from: "user", text: "Marco Esposito", time: "20:15" },
-      { from: "bot", text: "✅ Prenotato!\n📅 Sabato 19 aprile — 20:00\n👥 4 persone.\nA presto!", time: "20:15" },
+      { from: "bot", text: "✅ Prenotato!\n📅 Sabato 19 aprile alle 20:00\n👥 4 persone.\nA presto!", time: "20:15" },
     ],
   },
   {
-    label: "Reminder — 24 ore prima",
+    label: "Reminder · 24 ore prima",
     messages: [
       { from: "bot", text: "Ciao Marco! 👋 Ti ricordiamo la prenotazione di domani alle 20:00 per 4 persone. Confermi?\nRispondi Sì / No", time: "19:00" },
       { from: "user", text: "Sì, ci vediamo domani!", time: "19:02" },
@@ -33,9 +33,9 @@ const blocks: Block[] = [
     ],
   },
   {
-    label: "Recensione — 20 ore dopo",
+    label: "Recensione · 20 ore dopo",
     messages: [
-      { from: "bot", text: "Ciao Marco! Speriamo che la serata di ieri sia stata piacevole 😊\nSe hai 30 secondi, lasciaci una recensione — per noi conta davvero 🙏\n→ g.page/ristorante", time: "16:00" },
+      { from: "bot", text: "Ciao Marco! Speriamo che la serata di ieri sia stata piacevole 😊\nSe hai 30 secondi, lasciaci una recensione, per noi conta davvero 🙏\n→ g.page/ristorante", time: "16:00" },
       { from: "user", text: "È stato tutto ottimo, lascio subito la recensione!", time: "16:04" },
     ],
   },

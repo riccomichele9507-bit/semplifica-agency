@@ -67,7 +67,7 @@ export default function ContattiPage() {
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-text-dim md:text-xl">
               Hai un progetto in testa o solo una curiosità? Scrivici. Niente
-              moduli infiniti, niente call inutili — rispondiamo da persona a
+              moduli infiniti, niente call inutili. Rispondiamo da persona a
               persona, di solito entro 24 ore.
             </p>
           </Reveal>

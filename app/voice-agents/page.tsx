@@ -16,7 +16,7 @@ export default function VoiceAgentsPage() {
       <AgentHero
         badge="Agente Vocale · 24/7"
         headline="Un agente AI risponde al telefono al posto tuo."
-        subheadline="Voce naturale in italiano, comprensione del contesto, capacità di prenotare appuntamenti e gestire richieste comuni. L'operatore umano interviene solo quando serve davvero — il resto lo gestisce l'agente."
+        subheadline="Voce naturale in italiano, comprensione del contesto, capacità di prenotare appuntamenti e gestire richieste comuni. L'operatore umano interviene solo quando serve davvero. Il resto lo gestisce l'agente."
       />
 
       <AgentProblema

@@ -108,7 +108,7 @@ export default function ContactForm() {
           role="status"
           className="rounded-xl border border-lime/40 bg-lime/10 px-4 py-3 text-sm text-lime"
         >
-          Messaggio inviato. Ti rispondiamo a breve — di solito entro 24 ore.
+          Messaggio inviato. Ti rispondiamo a breve, di solito entro 24 ore.
         </p>
       )}
 

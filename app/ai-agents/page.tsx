@@ -52,7 +52,7 @@ const agents: Agent[] = [
     name: "QuoteBot",
     href: "/quotebot",
     tag: "Da email a preventivo",
-    desc: "Legge la mail, capisce se è una richiesta d'offerta, arricchisce i dati dell'azienda dalla Camera di Commercio, pesca gli SKU dal catalogo e genera il preventivo PDF — pronto da approvare.",
+    desc: "Legge la mail, capisce se è una richiesta d'offerta, arricchisce i dati dell'azienda dalla Camera di Commercio, pesca gli SKU dal catalogo e genera il preventivo PDF pronto da approvare.",
     bullets: ["Estrazione richieste d'offerta", "Arricchimento dati P.IVA da Camera di Commercio", "Preventivo PDF + email risposta in italiano"],
     iconLucide: FileText,
   },
@@ -87,7 +87,7 @@ export default function AiAgentsPage() {
             </div>
 
             <h1 className="font-heading text-3xl font-bold leading-[1.12] tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
-              Agenti AI che lavorano per te — sul <span className="text-gradient">testo, la voce, i processi.</span>
+              Agenti AI che lavorano per te, sul <span className="text-gradient">testo, la voce, i processi.</span>
             </h1>
 
             <p className="mt-7 max-w-2xl text-base leading-relaxed text-text-dim md:text-lg">

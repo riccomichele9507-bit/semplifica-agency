@@ -18,14 +18,14 @@ const FASI = [
   },
   {
     n: "02",
-    durata: "2 — 3 settimane",
+    durata: "2-3 settimane",
     titolo: "Sviluppo del prototipo",
     body: "Costruiamo un primo prototipo funzionante del flusso che abbiamo scelto. Lo proviamo insieme su casi reali della tua azienda. Se il risultato ti convince, andiamo avanti. Se non funziona come immaginavi, lo dici, e correggiamo prima di investire altri soldi e altro tempo.",
     Panel: PanelChat,
   },
   {
     n: "03",
-    durata: "2 — 4 settimane",
+    durata: "2-4 settimane",
     titolo: "Integrazione e go-live",
     body: "Colleghiamo l'agente o l'automazione ai tuoi sistemi: CRM, WhatsApp aziendale, calendario, gestionale, fatturazione. Facciamo i test finali, formiamo il tuo team sull'uso quotidiano, mandiamo tutto in produzione.",
     Panel: PanelIntegrazione,
