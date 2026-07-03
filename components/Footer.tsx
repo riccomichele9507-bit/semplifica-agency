@@ -81,7 +81,7 @@ export default function Footer() {
             </text>
             <line x1="103" y1="129" x2="137" y2="129" stroke="#4ADE80" strokeWidth="1.8" opacity="0.6" strokeLinecap="round" />
             <text x="120" y="147" textAnchor="middle" fontFamily="var(--font-body)" fontSize="9" fontWeight="600" letterSpacing="2" fill="#C2C2B8">MICHELE RICCO</text>
-            <text x="120" y="161" textAnchor="middle" fontFamily="var(--font-body)" fontSize="7.6" letterSpacing="1.4" fill="#8A8A82">AI AUTOMATION SPECIALIST</text>
+            <text x="120" y="161" textAnchor="middle" fontFamily="var(--font-body)" fontSize="8" letterSpacing="1.6" fill="#8A8A82">AI AUTOMATION BUILDER</text>
           </svg>
           <span>© 2026 Semplifica AI · Tutti i diritti riservati</span>
         </div>
