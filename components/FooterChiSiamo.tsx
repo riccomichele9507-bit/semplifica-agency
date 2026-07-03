@@ -30,12 +30,7 @@ export default function FooterChiSiamo() {
             </p>
           </div>
           <p className="mt-6 text-sm text-text-dim">
-            {site.location} ·{" "}
-            <a href={`mailto:${site.email}`} className="text-lime hover:underline">{site.email}</a>{" "}
-            ·{" "}
-            <a href={site.linkedin} target="_blank" rel="noopener noreferrer" className="text-lime hover:underline">
-              LinkedIn
-            </a>
+            <a href={`mailto:${site.email}`} className="text-lime hover:underline">{site.email}</a>
           </p>
         </div>
       </div>
