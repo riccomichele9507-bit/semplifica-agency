@@ -32,7 +32,7 @@ export default function Navbar() {
 
         <div className="flex items-center gap-3">
           <Link
-            href="#contatti"
+            href="/#contatti"
             className="hidden rounded-md border border-lime px-5 py-2 text-sm font-semibold text-lime transition-colors hover:bg-lime hover:text-bg md:inline-flex"
           >
             Prenota call
@@ -64,7 +64,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="#contatti"
+              href="/#contatti"
               className="mt-2 rounded-md border border-lime px-5 py-2.5 text-center text-sm font-semibold text-lime hover:bg-lime hover:text-bg"
               onClick={() => setOpen(false)}
             >

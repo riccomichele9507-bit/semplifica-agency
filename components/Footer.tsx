@@ -3,9 +3,9 @@ import { site } from "@/lib/site";
 import FooterChiSiamo from "@/components/FooterChiSiamo";
 
 const NAV = [
-  { label: "Servizi", href: "#servizi" },
-  { label: "Chi siamo", href: "#chi-siamo" },
-  { label: "Contatti", href: "#contatti" },
+  { label: "Servizi", href: "/#servizi" },
+  { label: "Chi siamo", href: "/#chi-siamo" },
+  { label: "Contatti", href: "/#contatti" },
 ];
 
 const LEGALE = [
