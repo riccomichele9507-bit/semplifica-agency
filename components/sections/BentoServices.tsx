@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Bot, Workflow, Smartphone, Cpu, Boxes, ArrowRight } from "lucide-react";
+import { Bot, Workflow, Cpu, Boxes, ArrowRight } from "lucide-react";
 
 /** Bento grid dei servizi (stile Vercel). AI Agents = card grande (prima
  *  immagine, con le cube), poi Workflow e Semplifica Studio. Palette verde. */
@@ -70,7 +70,7 @@ export default function BentoServices() {
             </div>
           </Link>
 
-          {/* Colonna destra: 2x2 (Workflow, Semplifica Studio, Web App, Custom AI) */}
+          {/* Colonna destra: Workflow, Semplifica Studio, Custom AI */}
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
             {/* Workflow */}
             <Link
@@ -117,33 +117,10 @@ export default function BentoServices() {
               </div>
             </Link>
 
-            {/* Web App */}
-            <Link
-              href="/web-app"
-              className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface/60 p-7 transition-colors duration-300 hover:border-lime/30"
-            >
-              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(74,222,128,0.06),transparent_55%)]" />
-              <div className="relative z-10 flex h-full flex-col">
-                <div className="mb-4 flex items-center gap-3">
-                  <div className="rounded-lg border border-lime/15 bg-lime/5 p-2 text-lime">
-                    <Smartphone className="size-5" />
-                  </div>
-                  <h3 className="font-heading text-lg font-bold tracking-tight text-text">Web App</h3>
-                </div>
-                <p className="mb-4 flex-1 text-xs leading-relaxed text-text-dim">
-                  Web app di ordinazione e prenotazione su misura, sul tuo dominio. I clienti
-                  ordinano da te, tu paghi zero commissioni alle piattaforme.
-                </p>
-                <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-lime/80 transition-colors group-hover:text-lime">
-                  Vedi la pagina <ArrowRight className="size-3" />
-                </span>
-              </div>
-            </Link>
-
-            {/* Custom AI */}
+            {/* Custom AI — occupa la riga intera per bilanciare la griglia a 3 card */}
             <Link
               href="#contatti"
-              className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface/60 p-7 transition-colors duration-300 hover:border-lime/30"
+              className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface/60 p-7 transition-colors duration-300 hover:border-lime/30 sm:col-span-2"
             >
               <div className="relative z-10 flex h-full flex-col">
                 <div className="mb-4 flex items-center gap-3">

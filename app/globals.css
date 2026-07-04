@@ -170,7 +170,7 @@
   background: conic-gradient(from 0deg, transparent 0deg, #4ADE80 90deg, #3DBE6C 180deg, transparent 270deg);
   animation: conic-rotate 3s linear infinite;
 }
-@media (max-width: 768px), (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce) {
   .btn-glow-border::before { animation: none; background: linear-gradient(135deg, #4ADE80, #3DBE6C); }
 }
 
