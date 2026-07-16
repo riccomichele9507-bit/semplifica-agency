@@ -5,7 +5,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import BackHomeButton from "@/components/BackHomeButton";
-import SicurezzaConformita from "@/components/sections/SicurezzaConformita";
+import ConditionalCompliance from "@/components/sections/ConditionalCompliance";
+import ChromeGate from "@/components/ChromeGate";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -29,11 +30,15 @@ export default function RootLayout({
   return (
     <html lang="it">
       <body className="min-h-screen bg-bg text-text antialiased">
-        <Navbar />
-        <BackHomeButton />
+        <ChromeGate>
+          <Navbar />
+          <BackHomeButton />
+        </ChromeGate>
         <main>{children}</main>
-        <SicurezzaConformita />
-        <Footer />
+        <ChromeGate>
+          <ConditionalCompliance />
+          <Footer />
+        </ChromeGate>
         <WhatsAppButton />
       </body>
     </html>

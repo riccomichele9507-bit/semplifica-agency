@@ -13,28 +13,28 @@ const FASI = [
     n: "01",
     durata: "1 settimana",
     titolo: "Analisi",
-    body: "Partiamo con una call di 60 minuti in cui ci racconti come funziona la tua azienda oggi, dove perdi più tempo, e cosa vorresti delegare per primo. Da lì capiamo insieme se l'AI è la risposta giusta o se serve qualcos'altro, e quanto vale concretamente intervenire.",
+    body: "Partiamo con una call di 60 minuti in cui mi racconti come funziona la tua azienda oggi, dove perdi più tempo e cosa vorresti delegare per primo. Da lì ti dico se l'AI è la risposta giusta o se ti serve altro, e quanto vale concretamente intervenire.",
     Panel: PanelAnalisi,
   },
   {
     n: "02",
     durata: "2-3 settimane",
     titolo: "Sviluppo del prototipo",
-    body: "Costruiamo un primo prototipo funzionante del flusso che abbiamo scelto. Lo proviamo insieme su casi reali della tua azienda. Se il risultato ti convince, andiamo avanti. Se non funziona come immaginavi, lo dici, e correggiamo prima di investire altri soldi e altro tempo.",
+    body: "Costruisco un primo prototipo funzionante del flusso scelto. Lo testiamo insieme su casi reali della tua azienda: ordini veri, clienti veri, non dati finti. Se ti convince, andiamo avanti. Se qualcosa non torna, lo correggo prima che tu spenda altri soldi e altro tempo.",
     Panel: PanelChat,
   },
   {
     n: "03",
     durata: "2-4 settimane",
     titolo: "Integrazione e go-live",
-    body: "Colleghiamo l'agente o l'automazione ai tuoi sistemi: CRM, WhatsApp aziendale, calendario, gestionale, fatturazione. Facciamo i test finali, formiamo il tuo team sull'uso quotidiano, mandiamo tutto in produzione.",
+    body: "Collego l'agente o l'automazione ai tuoi sistemi: CRM, WhatsApp aziendale, calendario, gestionale, fatturazione. Faccio i test finali, formo il tuo team sull'uso quotidiano, e mando tutto in produzione.",
     Panel: PanelIntegrazione,
   },
   {
     n: "04",
     durata: "continua",
     titolo: "Ottimizzazione e crescita",
-    body: "Dopo il go-live restiamo a tuo fianco. Monitoriamo i numeri, miglioriamo il comportamento dell'agente sulla base dei casi reali, lo estendiamo ad altri processi quando ha senso farlo. Una piccola fee mensile copre tutto questo.",
+    body: "Dopo il go-live resto al tuo fianco. Monitoro i numeri, miglioro il comportamento dell'agente sui casi reali, lo estendo ad altri processi quando ha senso. Una fee mensile piccola copre tutto questo, senza sorprese in fattura.",
     Panel: PanelOttimizzazione,
   },
 ];
@@ -45,11 +45,11 @@ export default function ComeLavoriamo() {
       <div className="container-x">
         <div className="mx-auto mb-16 max-w-2xl text-center md:mb-24">
           <h2 className="font-heading text-3xl font-semibold leading-tight text-text md:text-5xl">
-            Dal primo brief al go-live, con <span className="text-accent">trasparenza</span> in
-            ogni fase.
+            Dal primo brief al go-live, ti mostro <span className="text-accent">ogni fase</span>.
+            Zero sorprese.
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-text-dim md:text-lg">
-            Quattro fasi chiare, tempistiche definite in anticipo.
+            4 fasi, tempi decisi da subito. Sai sempre a che punto sei.
           </p>
         </div>
 

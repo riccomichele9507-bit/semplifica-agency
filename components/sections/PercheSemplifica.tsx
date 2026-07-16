@@ -7,32 +7,32 @@ const BENEFICI = [
   {
     Icon: Clock,
     titolo: "Più tempo per il team",
-    body: "Le persone smettono di fare lavoro ripetitivo. Le ore liberate vanno sui clienti importanti e sulle decisioni che contano.",
+    body: "Il tuo team smette di perdere ore su compiti ripetitivi. Quel tempo lo investi sui clienti che contano e sulle decisioni che fanno crescere l'azienda.",
   },
   {
     Icon: Zap,
     titolo: "Clienti seguiti subito",
-    body: "Risposte immediate su WhatsApp, telefono ed email, a qualsiasi ora. Nessun cliente resta in attesa per giorni.",
+    body: "Rispondi su WhatsApp, telefono ed email in pochi secondi, a qualsiasi ora. Zero clienti lasciati in attesa mentre pensano al concorrente.",
   },
   {
     Icon: MoonStar,
     titolo: "Aperto 24 ore su 24",
-    body: "Gli agenti lavorano la sera, la notte, nel weekend. Non vanno in ferie e non perdono le chiamate del sabato.",
+    body: "I tuoi agenti lavorano la sera, la notte, nel weekend. Non vanno in ferie, non si ammalano, non perdono la chiamata del sabato mattina.",
   },
   {
     Icon: TrendingDown,
     titolo: "Costi sotto controllo",
-    body: "Meno errori manuali, meno commissioni delivery, meno ore su compiti automatizzabili. Il margine cresce.",
+    body: "Meno errori manuali, meno ore buttate su compiti automatizzabili, meno costi che non servono. Quello che risparmi resta margine tuo.",
   },
   {
     Icon: BarChart3,
     titolo: "Dati sempre in ordine",
-    body: "Ogni conversazione, ordine e recensione finisce in un report. Lo leggi in cinque minuti la domenica sera.",
+    body: "Ogni conversazione, ordine e recensione finisce in un report chiaro. Lo leggi in 5 minuti la domenica sera, non 2 ore il lunedì mattina.",
   },
   {
     Icon: Layers,
     titolo: "Cresci senza assumere",
-    body: "Quando il volume sale, l'agente scala con te. Gestisci il doppio del lavoro senza nuove risorse per i task ripetitivi.",
+    body: "Quando il volume sale, l'agente scala con te. Gestisci il doppio del lavoro senza assumere una persona in più per i task ripetitivi.",
   },
 ];
 
@@ -43,10 +43,10 @@ export default function PercheSemplifica() {
         <div className="mx-auto mb-14 max-w-2xl text-center md:mb-20">
           <p className="eyebrow mb-5">Cosa cambia in azienda</p>
           <h2 className="font-heading text-3xl font-bold leading-tight text-text md:text-5xl">
-            Sei motivi per <span className="text-gradient">iniziare</span>.
+            6 motivi per <span className="text-gradient">iniziare</span>.
           </h2>
           <p className="mx-auto mt-5 max-w-lg text-sm text-text-dim">
-            Passa il mouse sulle card per scoprire il perché.
+            Passa il mouse su ogni card e scopri cosa cambia davvero.
           </p>
         </div>
 

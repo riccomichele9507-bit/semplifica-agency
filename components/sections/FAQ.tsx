@@ -3,27 +3,27 @@
 const FAQS = [
   {
     q: "Quanto tempo serve per partire?",
-    a: "Dalla prima call alla messa in produzione: tra le 3 e le 5 settimane per un agente AI singolo o un'automazione lineare. Per progetti più complessi o web app complete, si arriva alle 8-10 settimane. La tempistica precisa te la confermiamo dopo il brief iniziale, in modo realistico.",
+    a: "Dalla prima call alla messa in produzione: 3-5 settimane per un agente AI o un'automazione singola. Per progetti più complessi, o per una web app completa, si arriva a 8-10 settimane. Il numero esatto te lo do dopo il brief iniziale, senza margini di fantasia.",
   },
   {
     q: "Quanto costa un progetto?",
-    a: "Dipende dalla complessità e dal livello di integrazione richiesto. Dopo la prima call ricevi un preventivo scritto e dettagliato.",
+    a: "Dipende dalla complessità e dal livello di integrazione richiesto. Dopo la prima call ti mando un preventivo scritto e dettagliato, cifra per cifra.",
   },
   {
     q: "Chi possiede il codice, i dati e i clienti?",
-    a: "Sono tutti tuoi. Il codice viene consegnato e documentato, i dati restano sui tuoi sistemi o sul tuo cloud, i clienti non li tocchiamo mai direttamente. Quando finiamo il progetto, sei libero di farlo gestire anche a un altro fornitore: tutto è scritto e organizzato per essere ripreso da chiunque.",
+    a: "Sono tutti tuoi. Ti consegno il codice documentato, i dati restano sui tuoi sistemi o sul tuo cloud, i tuoi clienti non li tocco mai direttamente. A fine progetto sei libero di farlo gestire anche a un altro fornitore: tutto è scritto e organizzato per essere ripreso da chiunque.",
   },
   {
     q: "Cosa succede se l'agente sbaglia una risposta?",
-    a: "Sulle azioni che contano, come preventivi, appuntamenti e risposte alle recensioni, resta sempre un tuo passaggio di controllo. L'agente prepara la risposta, tu la leggi e la invii. Così non ci sono sorprese sul gruppo WhatsApp dell'azienda.",
+    a: "Sulle azioni che contano, preventivi, appuntamenti, risposte alle recensioni, resta sempre un tuo passaggio di controllo. L'agente prepara la risposta, tu la leggi e la invii. Zero sorprese sul gruppo WhatsApp dell'azienda.",
   },
   {
     q: "Funziona con i miei sistemi esistenti?",
-    a: "Sì, è il nostro lavoro principale. Integriamo gli agenti con HubSpot, Pipedrive, Notion, gestionali italiani custom, fogli Google, ERP aziendali. Se il sistema ha un'API o un foglio condiviso, riusciamo a collegarlo. Se è un sistema chiuso, troviamo una via alternativa.",
+    a: "Sì, è il lavoro che faccio ogni giorno. Integro gli agenti con HubSpot, Pipedrive, Notion, gestionali italiani custom, fogli Google, ERP aziendali. Se il sistema ha un'API o un foglio condiviso, lo collego. Se è un sistema chiuso, trovo una via alternativa.",
   },
   {
     q: "Cosa succede dopo il go-live?",
-    a: "Restiamo a tuo fianco. C'è una fee mensile di manutenzione che copre il monitoraggio dei numeri, i piccoli aggiustamenti necessari, le ottimizzazioni periodiche. Quando un agente smette di funzionare bene è perché qualcosa è cambiato nel tuo business o nei tuoi processi: in quel caso lo riallineiamo insieme.",
+    a: "Resto al tuo fianco. C'è una fee mensile di manutenzione che copre il monitoraggio dei numeri, i piccoli aggiustamenti necessari, le ottimizzazioni periodiche. Quando un agente smette di funzionare bene è perché qualcosa è cambiato nel tuo business: in quel caso lo riallineo con te.",
   },
 ];
 
@@ -33,7 +33,7 @@ export default function FAQ() {
       <div className="container-x">
         <div className="mx-auto mb-14 max-w-2xl text-center md:mb-16">
           <h2 className="font-heading text-3xl font-semibold leading-tight text-text md:text-5xl">
-            Le risposte alle domande che ci fanno <span className="text-accent">prima</span> di
+            Le risposte alle domande che mi fanno <span className="text-accent">prima</span> di
             firmare.
           </h2>
         </div>

@@ -6,11 +6,11 @@ import { site } from "@/lib/site";
 type Status = "idle" | "sending" | "ok" | "error";
 
 const INTERESSI = [
-  "Agente AI custom",
-  "Automazione (n8n / Make)",
+  "Agente AI su misura",
+  "Automazione dei processi (workflow)",
   "Web app o sito su misura",
   "Consulenza strategica AI",
-  "Non sono sicuro, vediamo insieme",
+  "Non sono sicuro, ne parliamo insieme",
 ];
 
 export default function Contatti() {
@@ -72,10 +72,10 @@ export default function Contatti() {
           <div className="mb-12 text-center">
             <p className="eyebrow mb-5">Partiamo?</p>
             <h2 className="font-heading text-3xl font-semibold leading-tight text-text md:text-5xl">
-              Parliamo del tuo <span className="text-accent">progetto</span>.
+              Raccontami il tuo <span className="text-accent">progetto</span>.
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-text-dim md:text-lg">
-              Prenota una consulenza gratuita, oppure compila il form qui sotto.
+              Prenota una call gratuita di 20 minuti, oppure compila il form qui sotto.
             </p>
 
             <div className="mt-8 flex justify-center">
@@ -85,7 +85,7 @@ export default function Contatti() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-md bg-lime px-7 py-3.5 text-sm font-semibold text-bg transition-colors hover:bg-lime-dim"
               >
-                Prenota una consulenza →
+                Prenota la tua call gratuita →
               </a>
             </div>
           </div>
@@ -94,7 +94,7 @@ export default function Contatti() {
             <div className="rounded-xl border border-lime/40 bg-lime/[0.06] p-8 text-center">
               <p className="font-heading text-2xl font-semibold text-text">Richiesta inviata.</p>
               <p className="mt-3 text-text-dim">
-                Grazie. Ti rispondo entro 48 ore, di solito molto prima.
+                Grazie. Ti rispondo personalmente entro 48 ore, spesso lo stesso giorno.
               </p>
             </div>
           ) : (
@@ -136,7 +136,7 @@ export default function Contatti() {
               </div>
 
               <div>
-                <label className={labelClass}>Raccontaci cosa vorresti automatizzare *</label>
+                <label className={labelClass}>Raccontami cosa vorresti automatizzare o migliorare *</label>
                 <textarea rows={4} className={inputClass} value={form.messaggio} onChange={(e) => update("messaggio", e.target.value)} required />
               </div>
 
@@ -152,7 +152,7 @@ export default function Contatti() {
 
               {status === "error" && (
                 <p className="text-sm text-red-400">
-                  Controlla i campi obbligatori e riprova, oppure scrivici su WhatsApp.
+                  Controlla i campi obbligatori e riprova, oppure scrivimi su WhatsApp.
                 </p>
               )}
 
@@ -167,7 +167,7 @@ export default function Contatti() {
           )}
 
           <p className="mt-6 text-center text-sm text-text-dim">
-            Preferisci scriverci direttamente? Siamo su{" "}
+            Preferisci scrivermi direttamente? Sono su{" "}
             <a href={site.whatsapp} target="_blank" rel="noopener noreferrer" className="text-lime hover:underline">
               WhatsApp
             </a>{" "}

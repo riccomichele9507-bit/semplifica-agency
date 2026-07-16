@@ -3,6 +3,7 @@
 @import "@fontsource-variable/syne";
 @import "@fontsource-variable/dm-sans";
 @import "@fontsource-variable/jetbrains-mono";
+@import "@fontsource-variable/archivo";
 
 /* ============================================
    SEMPLIFICA AI — Design System v3
@@ -28,6 +29,12 @@
   --font-heading: "Newsreader Variable", "Syne Variable", Georgia, serif;
   --font-body: "DM Sans Variable", system-ui, sans-serif;
   --font-mono: "JetBrains Mono Variable", ui-monospace, monospace;
+}
+
+/* Font display "grotesk pesante" per il sotto-brand food (pagina Ristoranti, stile owner.com) */
+.font-grotesk {
+  font-family: "Archivo Variable", "DM Sans Variable", system-ui, sans-serif;
+  letter-spacing: -0.02em;
 }
 
 /* ---- Base layer ---- */

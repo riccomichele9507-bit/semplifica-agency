@@ -3,7 +3,9 @@ import { site } from "@/lib/site";
 import FooterChiSiamo from "@/components/FooterChiSiamo";
 
 const NAV = [
-  { label: "Servizi", href: "/#servizi" },
+  { label: "Automazioni", href: "/ai-agents" },
+  { label: "Web App", href: "/web-app" },
+  { label: "Siti web", href: "/studio" },
   { label: "Chi siamo", href: "/#chi-siamo" },
   { label: "Contatti", href: "/#contatti" },
 ];

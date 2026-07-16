@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import SemplificaStudio from "@/components/sections/SemplificaStudio";
 
 export const metadata: Metadata = {
-  title: "Semplifica Studio — Siti, web app, GEO & SEO",
+  title: "Siti web e web app su misura, GEO & SEO",
   description:
-    "La web-factory di Semplifica AI: siti e web app veloci e accessibili, refactoring di prototipi, e GEO & SEO per farti trovare da ChatGPT, Gemini e Google.",
+    "Costruisco siti e web app veloci e su misura per le PMI, e ti faccio trovare su Google e su ChatGPT. In giorni, non mesi.",
 };
 
 export default function StudioPage() {

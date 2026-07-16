@@ -29,29 +29,29 @@ type Feature = {
 };
 
 const STUDIO: Feature[] = [
-  { Icon: Layout, titolo: "Siti e landing", desc: "Veloci, accessibili, fatti per convertire. Dalla prima impressione alla call.", href: "/web-apps" },
+  { Icon: Layout, titolo: "Siti e landing", desc: "Un sito veloce e chiaro, pensato per farti arrivare le richieste. Dalla prima schermata al contatto.", href: "/web-apps" },
   {
     Icon: LayoutDashboard,
     titolo: "Web app su misura",
-    desc: "Ordinazione, prenotazione, dashboard e portali. Costruiti sul tuo flusso, non su un template.",
+    desc: "Ordini, prenotazioni, dashboard, portali. Le cucio sul modo in cui lavori tu, non su un template preconfezionato.",
     links: [
       { label: "Vedi gli esempi", href: "/web-apps" },
-      { label: "Vedi il caso studio", href: "/web-app" },
+      { label: "Vedi il caso studio", href: "/web-app/ristoranti" },
     ],
   },
-  { Icon: Wrench, titolo: "Refactoring vibe-coded", desc: "Sistemiamo prototipi AI-generated e li portiamo in produzione, senza riscrivere tutto." },
-  { Icon: Accessibility, titolo: "Accessibilità", desc: "Conforme WCAG: il web per tutti, davvero. Una scelta di design, non una spunta." },
-  { Icon: Gauge, titolo: "Performance & SEO", desc: "Core Web Vitals curati. Veloce per gli utenti, leggibile per i motori." },
-  { Icon: Boxes, titolo: "Design system", desc: "Coerenza visiva e codice manutenibile. Cresce con te, senza accumulare debito." },
+  { Icon: Wrench, titolo: "Refactoring vibe-coded", desc: "Hai un prototipo fatto con l'AI che si rompe? Lo sistemo e lo porto in produzione, senza ripartire da zero." },
+  { Icon: Accessibility, titolo: "Accessibilità", desc: "Conforme allo standard WCAG: il sito funziona anche per chi usa screen reader o tastiera." },
+  { Icon: Gauge, titolo: "Performance & SEO", desc: "Curo i Core Web Vitals: carica in fretta per gli utenti e Google lo legge bene." },
+  { Icon: Boxes, titolo: "Design system", desc: "Codice ordinato e coerente, così quando cresci non devi rifare tutto da capo." },
 ];
 
 const GEO: Feature[] = [
-  { Icon: Bot, titolo: "Ottimizzazione per LLM (GEO)", desc: "Strutturiamo i contenuti perché l'AI ti scelga come fonte da citare, non come uno dei mille risultati." },
-  { Icon: Search, titolo: "SEO tecnico e contenuti", desc: "Google non sparisce. Lo presidiamo: performance, struttura, parole chiave che contano." },
-  { Icon: Database, titolo: "Dati strutturati", desc: "Schema.org e knowledge graph: diamo all'AI il modo di capire chi sei e cosa offri." },
-  { Icon: Eye, titolo: "Monitoraggio citazioni AI", desc: "Vediamo quando e come i modelli ti nominano, e cosa dicono di te. Niente più punti ciechi." },
-  { Icon: MessageSquareText, titolo: "Contenuti che rispondono", desc: "Scritti per le domande reali dei tuoi clienti, così diventano la risposta che cercavano." },
-  { Icon: Award, titolo: "Autorità", desc: "Presenza, recensioni e segnali di fiducia che pesano sia per l'AI sia per i motori." },
+  { Icon: Bot, titolo: "Ottimizzazione per LLM (GEO)", desc: "Preparo i tuoi contenuti perché l'AI ti citi come fonte quando qualcuno fa una domanda sul tuo settore." },
+  { Icon: Search, titolo: "SEO tecnico e contenuti", desc: "Google conta ancora. Lavoro su velocità, struttura e le parole chiave che ti portano clienti." },
+  { Icon: Database, titolo: "Dati strutturati", desc: "Metto in ordine i dati del sito con Schema.org, così l'AI capisce chi sei e cosa fai." },
+  { Icon: Eye, titolo: "Monitoraggio citazioni AI", desc: "Controllo quando ChatGPT e gli altri ti nominano, e cosa dicono di te." },
+  { Icon: MessageSquareText, titolo: "Contenuti che rispondono", desc: "Scrivo per le domande vere che ti fanno i clienti, così il tuo sito è la risposta che trovano." },
+  { Icon: Award, titolo: "Autorità", desc: "Recensioni e segnali di fiducia che pesano sia per l'AI sia per Google." },
 ];
 
 function FeatureBody({ f }: { f: Feature }) {
@@ -123,11 +123,12 @@ export default function SemplificaStudio() {
         <div className="mx-auto mb-14 max-w-2xl text-center md:mb-16">
           <p className="eyebrow mb-5">Semplifica Studio</p>
           <h1 className="font-heading text-3xl font-bold leading-tight text-text md:text-5xl">
-            Codice solido, design <span className="text-gradient">Semplifica</span>.
+            Siti e web app che ti <span className="text-gradient">portano clienti.</span>
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-text-dim md:text-lg">
-            La nostra web-factory: siti e web app accessibili, veloci e su misura. Sistemiamo
-            anche i prototipi AI-generated che non reggono la produzione. In giorni, non mesi.
+            Costruisco siti e web app su misura per la tua attività, veloci e fatti per
+            convertire. E se hai un prototipo AI che non regge, lo sistemo io e lo porto
+            online. In giorni, non mesi.
           </p>
         </div>
 
@@ -142,9 +143,9 @@ export default function SemplificaStudio() {
                 Fatti trovare <span className="text-gradient">dall&apos;AI</span>.
               </h2>
               <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-text-dim md:text-lg">
-                I tuoi clienti non cercano più solo su Google: chiedono a ChatGPT, Gemini,
-                Perplexity. Rendiamo i tuoi contenuti la risposta che l&apos;AI cita e che
-                Google posiziona.
+                I tuoi clienti non cercano più solo su Google. Chiedono a ChatGPT. Faccio in
+                modo che sia il tuo sito la risposta che l&apos;AI cita e che Google mette in
+                alto.
               </p>
             </div>
 
@@ -156,7 +157,7 @@ export default function SemplificaStudio() {
               href="/#contatti"
               className="inline-flex items-center gap-2 rounded-md border border-lime px-7 py-3.5 text-sm font-semibold text-lime transition-colors hover:bg-lime hover:text-bg"
             >
-              Partiamo da un audit gratuito
+              Prenota un audit gratuito del tuo sito
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>

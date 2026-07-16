@@ -22,7 +22,7 @@ const BENEFICI = [
   {
     Icon: TrendingDown,
     titolo: "Costi sotto controllo",
-    desc: "Meno errori manuali, meno commissioni delivery, meno ore perse in lavori a basso valore.",
+    desc: "Meno errori manuali, meno costi che non servono, meno ore perse in lavori a basso valore.",
   },
   {
     Icon: BarChart3,

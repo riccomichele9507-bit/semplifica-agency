@@ -35,22 +35,29 @@ export default function Hero() {
           animate="visible"
           className="mx-auto max-w-2xl text-center"
         >
+          <motion.p
+            variants={item}
+            className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-lime"
+          >
+            Semplifica AI · di Michele Ricco
+          </motion.p>
+
           <motion.h1
             variants={item}
             className="font-heading text-4xl font-bold leading-[1.08] tracking-tight text-text sm:text-5xl md:text-6xl lg:text-[4.5rem]"
           >
-            Sistemi intelligenti,
+            Tolgo alle PMI il lavoro ripetitivo
             <br />
-            <span className="text-gradient">crescita autonoma</span>
+            e <span className="text-gradient">porto più clienti.</span>
           </motion.h1>
 
           <motion.p
             variants={item}
             className="mx-auto mt-8 max-w-xl text-base leading-relaxed text-text-dim md:text-lg"
           >
-            Ogni settimana perdi ore in email, dati da inserire, preventivi scritti la sera.
-            Le automatizziamo per te. Agenti che rispondono ai clienti, workflow che girano
-            da soli, web app su misura. Tu recuperi il tempo per il lavoro che conta.
+            Automazioni, agenti e web app AI su misura per imprese e professionisti. Le
+            costruisco io, da imprenditore: sistemi che fanno il lavoro ripetitivo al posto
+            tuo e ti portano clienti.
           </motion.p>
 
           <motion.div variants={item} className="mt-10 flex justify-center">

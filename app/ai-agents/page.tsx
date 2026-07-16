@@ -67,8 +67,8 @@ const agents: Agent[] = [
 ];
 
 const steps = [
-  { title: "Ci dici cosa ti serve", desc: "Riattivare lead, gestire prenotazioni, rispondere al telefono o automatizzare i preventivi. Capiamo il tuo flusso in una call." },
-  { title: "Costruiamo l'agente", desc: "Colleghiamo WhatsApp, telefono, CRM e calendario. L'agente parla col tono giusto e conosce la tua attività." },
+  { title: "Mi dici cosa ti serve", desc: "Riattivare lead, gestire prenotazioni, rispondere al telefono o automatizzare i preventivi. Capisco il tuo flusso in una call." },
+  { title: "Costruisco l'agente", desc: "Collego WhatsApp, telefono, CRM e calendario. L'agente parla col tono giusto e conosce la tua attività." },
   { title: "Lavora mentre tu dormi", desc: "L'agente gestisce le conversazioni in autonomia, giorno e notte. Tu ricevi solo i risultati." },
 ];
 
@@ -111,7 +111,7 @@ export default function AiAgentsPage() {
       <section id="agenti" className="relative border-t border-border py-20 md:py-28">
         <div className="container-x">
           <Reveal className="mb-12 max-w-2xl md:mb-16">
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-amber">I nostri agenti</p>
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-amber">I miei agenti</p>
             <h2 className="font-heading text-3xl font-bold md:text-5xl">Cinque agenti. <span className="text-gradient">Cinque risultati concreti.</span></h2>
           </Reveal>
 

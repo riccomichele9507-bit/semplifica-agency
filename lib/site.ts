@@ -17,7 +17,9 @@ export const site = {
 
 /** Navigazione one-page. */
 export const navLinks = [
-  { label: "Servizi", href: "/#servizi" },
-  { label: "Chi siamo", href: "/#chi-siamo" },
+  { label: "Home", href: "/" },
+  { label: "Automazioni", href: "/ai-agents" },
+  { label: "Web App", href: "/web-app" },
+  { label: "Siti web", href: "/studio" },
   { label: "Contatti", href: "/#contatti" },
 ];
