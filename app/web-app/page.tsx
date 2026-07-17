@@ -8,6 +8,7 @@ import {
   Check,
 } from "lucide-react";
 import Reveal from "@/components/anim/Reveal";
+import ComeFunzionaWebApp from "@/components/sections/ComeFunzionaWebApp";
 import { Button } from "@/components/ui/button";
 import { site } from "@/lib/site";
 
@@ -146,14 +147,21 @@ export default function WebAppHubPage() {
             </p>
             <div className="mt-8 flex justify-center">
               <Button asChild size="lg" variant="outline">
-                <Link href="/web-app/ristoranti">
-                  Vedi il caso studio <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
+                <a
+                  href="https://www.specialsushipokebari.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Vedi la web app <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
               </Button>
             </div>
           </Reveal>
         </div>
       </section>
+
+      {/* Come funziona la web app del caso studio */}
+      <ComeFunzionaWebApp />
 
       {/* CTA finale */}
       <section className="relative overflow-hidden border-t border-border py-20 md:py-28">
