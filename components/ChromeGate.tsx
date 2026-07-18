@@ -10,7 +10,7 @@ import { usePathname } from "next/navigation";
  *  Li nascondiamo via CSS: `hidden` (display:none) sulla route-prodotto, `contents`
  *  altrove (wrapper trasparente al layout, non altera il posizionamento). */
 
-const HIDE_ON = ["/web-app/ristoranti"];
+const HIDE_ON: string[] = [];
 
 export default function ChromeGate({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();

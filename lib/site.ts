@@ -19,7 +19,5 @@ export const site = {
 export const navLinks = [
   { label: "Home", href: "/" },
   { label: "Automazioni", href: "/ai-agents" },
-  { label: "Web App", href: "/web-app" },
-  { label: "Siti web", href: "/studio" },
   { label: "Contatti", href: "/#contatti" },
 ];

@@ -3,9 +3,9 @@
 import { usePathname } from "next/navigation";
 import SicurezzaConformita from "@/components/sections/SicurezzaConformita";
 
-/** Monta la sezione globale "Sicurezza & conformità" ovunque tranne che sul
- *  sotto-brand food light (/web-app/ristoranti), dove il chrome dark stona. */
-const HIDDEN_PREFIXES = ["/web-app/ristoranti"];
+/** Monta la sezione globale "Sicurezza & conformità". La lista dei prefissi
+ *  esclusi è vuota: la sezione compare su tutte le pagine. */
+const HIDDEN_PREFIXES: string[] = [];
 
 export default function ConditionalCompliance() {
   const pathname = usePathname() ?? "";
